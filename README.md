@@ -5,4 +5,8 @@ Run the command `npm i` to install important modules (p5, typescript, etc). Th
 
 ***
 
+## number guessing game
 
+Guess the random number and compete against bot´s.
+
+***
