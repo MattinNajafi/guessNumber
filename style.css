@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -120,4 +121,3 @@ header h1 {
     background:red;
     border-radius: 5px;
     flex-grow: 1;
-}

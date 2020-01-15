@@ -1,12 +1,11 @@
+# Slutprojektet
+Välkommen till den förinställda kodbasen för slutprojektet.
+Se filen `sketch.js` för hur ni ska börja skriva er kod!
 
 ## Installation
 
-Run the command `npm i` to install important modules (p5, typescript, etc). Then write and run `npm start` to start the project to see it live in the browser.
+Kör först kommandot `npm i` för att installera nödvändiga moduler (p5, typescript, etc)
+Kör sedan kommandot `npm start` för att starta projektet och se det live i en webbläsare
 
-***
-
-## number guessing game
-
-Guess the random number and compete against bot´s.
-
-***
+## TODO
+Lägg till ytterliggare information som är specifikt för ert projekt!

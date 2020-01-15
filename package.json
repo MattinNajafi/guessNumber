@@ -12,8 +12,5 @@
     "npm-run-all": "^4.1.5",
     "live-server": "^1.2.1",
     "typescript": "^3.7.3"
-  },
-  "dependencies": {
-    "npm-start": "^1.4.2"
   }
 }
