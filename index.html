@@ -1,59 +1,59 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>guessNumber</title>
+    <script src="./build/bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>guessNumber</title>
-  <script src="./build/bundle.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
-
-
-</head>
-
-<body>
-  <div class="mainmenu">
+  <body>
     <header>
-      <h1>Högre / Lägre</h1>
+      <h1>Higher / Lower</h1>
     </header>
-
-    <div class="input">
-      <h3>Namn:</h3>
-      <input type="text">
-    </div>
-
-    <div class="smileys">
-      <p>&#128578;</p>
-      <p>&#128528;</p>
-      <p>&#128544;</p>
-    </div>
-
-    <div class="bots-div">
-      <div class="headerOfBots">
-        <h3>Antal bots:</h3>
+    <div class="wrapper">
+      <div class="input">
+        <h3>Name:</h3>
+        <input type="text" />
+        <a href="#">Submit</a>
       </div>
-      <div class="nrOfBots">
-        <input type="checkbox" id="btnControl">
-        <label class="btn1" for="btnControl">1</label>
-        <input type="checkbox" id="btnControl1">
-        <label class="btn2" for="btnControl1">2</label>
-        <input type="checkbox" id="btnControl2">
-        <label class="btn3" for="btnControl2">3</label>
+
+      <div class="mainMenu">
+        <div class="smileys">
+          <p>&#128578;</p>
+          <p>&#128528;</p>
+          <p>&#128544;</p>
+        </div>
+
+        <div class="bots-div">
+          <div class="headerOfBots">
+            <h3>Choose bot:</h3>
+          </div>
+          <div class="nrOfBots">
+            <input type="checkbox" id="btnControl" />
+            <label class="btn1" for="btnControl">1</label>
+            <input type="checkbox" id="btnControl1" />
+            <label class="btn2" for="btnControl1">2</label>
+            <input type="checkbox" id="btnControl2" />
+            <label class="btn3" for="btnControl2">3</label>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div class="playGame">
+            <a id="playBtn" href="#">Play Game</a>
+          </div>
+          <div class="help-highscore">
+            <a href="#">Help</a><a href="#">Highscore</a>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="buttons">
-      <div class="playGame">
-        <a href="#">Starta Spel</a>
-      </div>
-      <div class="help-highscore">
-        <a href="#">Hjälp</a><a href="#">Highscore</a>
-      </div>
-    </div>
-  </div>
-  <!-- Code injected from JavaScript ^^ -->
-</body>
-
+    <!-- Code injected from JavaScript ^^ -->
+  </body>
 </html>

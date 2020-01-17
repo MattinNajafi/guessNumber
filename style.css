@@ -7,11 +7,10 @@
 }
 
 body {
-    height: 100vh;
     background: linear-gradient(blue, aqua);
 }
 
-.mainmenu {
+.wrapper {
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -19,21 +18,41 @@ body {
     align-items: center;
 }
 
+.mainMenu{
+    display:none;
+}
+
 header {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
 }
 
 header h1 {
     color: white;
+    margin-top: 1rem;
 }
-
+.input{
+    display: flex;
+    flex-direction: column;
+}
 .input input{
     box-shadow: 3px 3px 3px black;
     border: none;
     color: black;
+    height: 1.8rem;
+    padding: 5px;
 }
+
+.input a{
+    text-decoration: none;
+    border:0;
+    padding: 3px 5px;
+    border-radius: 5px;
+    background: lime;
+    align-self: center;
+    margin-top: 1rem;
+}
+
 .smileys{
     display:flex;
 }
@@ -121,3 +140,4 @@ header h1 {
     background:red;
     border-radius: 5px;
     flex-grow: 1;
+}
