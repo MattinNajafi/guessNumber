@@ -1,10 +1,11 @@
 class randomNumberGenerator {
-    randomNumber: number
+    randomNumber: number = Math.floor(Math.random() * 100) + 1
 
-    constructor(randomNumber: number) {
-        this.randomNumber = randomNumber
+
+    generate() {
+        return this.randomNumber
     }
-
 }
 
-// Math.floor(Math.random() * 100) + 1
+
+
