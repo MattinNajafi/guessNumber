@@ -1,3 +1,6 @@
 class Instructions{
 
+showInstructions(): void{
+
+}
 }
