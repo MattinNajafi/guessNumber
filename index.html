@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>guessNumber</title>
+    <script defer src="./build/bundle.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
@@ -48,9 +49,16 @@
             <a id="playBtn" href="#">Play Game</a>
           </div>
           <div class="help-highscore">
-            <a href="#">Help</a><a href="#">Highscore</a>
+            <button id="help">HELP</button><button id="highscore">HIGHSCORE</button>
           </div>
         </div>
+
+<div id="popupDiv"class="popup">
+  <div class="popup-content">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque cum, qui saepe eum minima quo temporibus illo nobis cumque nisi sit modi, voluptatum optio error amet eligendi distinctio enim consequuntur!</p>
+  </div>
+  <div class="closeHolder"><span class="close">Close</span></div>
+</div>
       </div>
 
       <div class="gameView">
