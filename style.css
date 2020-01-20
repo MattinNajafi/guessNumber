@@ -18,9 +18,9 @@ body {
     align-items: center;
 }
 
-.mainMenu{
+/* .mainMenu{
     display:none;
-}
+} */
 
 header {
     display: flex;
@@ -140,4 +140,8 @@ header h1 {
     background:red;
     border-radius: 5px;
     flex-grow: 1;
+}
+
+.numberInput {
+    color: black;
 }
