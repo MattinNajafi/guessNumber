@@ -2,15 +2,15 @@ let numberInput: number;
 let message: HTMLBodyElement; 
 let guess: number;
 
-class NumberChecks {
+class NumberCheck {
     public numberInput = document.querySelector(".numberInput");
     public message = document.querySelector(".message");
     
-public checkNumber() {
+public checkNumber(): void {
     guess = Number(numberInput);
 
-        if (numberInput === randomNumber) {
-           message.textContent = "YOU WON!"
+        if (numberInput == randomNumber) {
+           message.textContent = "YOU WIN!"
         }
 
         else if (numberInput < randomNumber) {
