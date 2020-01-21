@@ -18,9 +18,9 @@ body {
     align-items: center;
 }
 
-/* .mainMenu{ */
-    /* display:none; */
-/* } */
+/* .mainMenu{
+    display:none;
+} */
 
 header {
     display: flex;
@@ -146,6 +146,9 @@ header h1 {
     flex-grow: 1;
 }
 
+.numberInput {
+    color: black;
+}
 .popup {
         display: none; 
         position: fixed; 
