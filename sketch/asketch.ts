@@ -1,4 +1,4 @@
-// explanation of game modes
+// explanation of game phase
 // gamePhase = 0 = display name-input, game has not started
 // gamePhase = 1 = display main menu, game has not started
 // gamePhase = 2 = display game area, game has started
