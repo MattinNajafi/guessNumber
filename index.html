@@ -1,65 +1,70 @@
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>guessNumber</title>
-  <script defer src="./build/bundle.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>guessNumber</title>
+    <script defer src="./build/bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <header>
-    <h1>Higher / Lower</h1>
-  </header>
+  <body>
+    <header>
+      <h1>Higher / Lower</h1>
+    </header>
 
-  <div class="phase phase-0">
-    <div>
-      <h3>Name:</h3>
-      <input class="inputPlayerName" type="text" />
-      <a class="submitPlayerName" href="#">Submit</a>
-    </div>
-  </div><!-- end of phase 0-->
-
-  <div class="phase phase-1">
-
-    <!-- <div class="difficulties">
-      <p>&#128578;</p>
-      <p>&#128528;</p>
-      <p>&#128544;</p>
-    </div>
-
-    <div class="buttons">
-      <div class="playGame">
-        <a id="playBtn" href="#">Play Game</a>
+    <div class="phase phase-0">
+      <div class="boxForNameAndButton">
+        <div class="name">
+          <h3>Name:</h3>
+        </div>
+        <div class="inputAndButton">
+          <input id="inputPlayerName" type="text" />
+          <a class="submitPlayerName" href="#">Submit</a>
+        </div>
       </div>
-      <div class="help-highscore">
-        <button id="help">HELP</button>
-        <button id="highscore">HIGHSCORE</button>
-      </div>
-    </div> -->
+    </div>
+    <!-- end of phase 0-->
 
-
-    <div class="instructions">
-      <div class="content">
-        <p> det här är instruktionerna : det här är instruktionerna : det här är instruktionerna : det här är
-          instruktionerna : det här är instruktionerna : det här är instruktionerna : det här är instruktionerna : det
-          här är instruktionerna</p>
+    <div class="phase phase-1">
+      <div class="difficulties">
+        <p>&#128578;</p>
+        <p>&#128528;</p>
+        <p>&#128544;</p>
       </div>
 
-      <input type="button" value="open" class="toggle-btn">
+      <div class="buttons">
+        <div class="playGame">
+          <a id="playBtn">Play Game</a>
+        </div>
+        <div class="help-highscore">
+          <button id="help" class="toggle-btn" >HELP</button>
+          <button id="highscore">HIGHSCORE</button>
+        </div>
+      </div>
 
+    
+
+      
+        <div class="content">
+          <p>
+            Du skall gissa på ett tal som du tror att datorn tänker på. 
+            Vid fel gissning så berättar datorn om ditt tal är högre eller lägre, sedan får du försöka igen.
+          </p>
+        </div>
+        <!-- <input type="button" value="help" class="toggle-btn" /> -->
+     
     </div>
+    <!-- end of phase 1-->
 
-  </div> <!-- end of phase 1-->
+    <div class="phase phase-2"></div>
+    <!-- end of phase 2-->
 
-  <div class="phase phase-2">
-  </div><!-- end of phase 2-->
-
-  <div class="phase phase-3">
-  </div> <!-- end of phase 3-->
-
-</body>
-
+    <div class="phase phase-3"></div>
+    <!-- end of phase 3-->
+  </body>
 </html>
