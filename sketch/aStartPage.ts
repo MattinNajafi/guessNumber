@@ -10,6 +10,7 @@ let gamePhase: number;
 function init(): void {
 
   gamePhase = 0;
+  console.log("gamePhase:" +gamePhase)
   setupEventListenersClick();
 
   const guessSpan: number = 20; //make the user choose this with a range or dropdown
@@ -18,26 +19,30 @@ function init(): void {
   let numberGenerator = new NumberGenerator();
   let rng = numberGenerator.random(guessSpan);
   console.log(rng);
- 
+
 
 }
 
 function setupEventListenersClick() {
     toggleInstructions();
-    submitNamePlayer();
+    submitPlayerName();
     
 }
 
-function submitNamePlayer() {
-  let submitNamePlayerButton: any = document.querySelector(".submitNamePlayer")
+//Function when user click on submit 
+function submitPlayerName() {
+  let submitNamePlayerButton: any = document.querySelector(".submitPlayerName")
+  let phaseZeroDiv: any = document.querySelector(".phase-0")
+  let phaseOneDiv : any = document.querySelector(".phase-1")
 
-//Function when user click on submit -enter gamePhase 2 and see the gameMenu
   submitNamePlayerButton.addEventListener("click", function() {
-    //insert code that show the gameMenu --> gamePhase === 1
-    
-    //test code, should be deleted later
-    submitNamePlayerButton.style.display = "none"
-    
+    //insert if/else statement
+    //if the player enters their name --> function for gamePhase === 1
+    gamePhase = 1;
+    console.log("gamePhase:" +gamePhase)
+    phaseZeroDiv.style.display = "none"
+    phaseOneDiv.style.display = "block"
+    //else display a red border around the input field
   })
 }
 
