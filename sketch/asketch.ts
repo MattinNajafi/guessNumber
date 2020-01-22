@@ -1,5 +1,14 @@
-window.addEventListener("load", init);
+// explanation of game modes
+// gamePhase = 0 = display name-input, game has not started
+// gamePhase = 1 = display main menu, game has not started
+// gamePhase = 2 = display game area, game has started
+// gamePhase = 3 = display game results, game has ended 
 
+// global variables
+let gamePhase: number;
+
+window.addEventListener("load", init);
+gamePhase = 0;
 function init(): void {
   setupEventListenersClick();
 
