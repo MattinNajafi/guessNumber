@@ -8,7 +8,9 @@
 let gamePhase: number;
 
 window.addEventListener("load", init);
+
 gamePhase = 0;
+
 function init(): void {
   setupEventListenersClick();
 
@@ -18,11 +20,27 @@ function init(): void {
   let numberGenerator = new NumberGenerator();
   let rng = numberGenerator.random(guessSpan);
   console.log(rng);
+
+
 }
 
 function setupEventListenersClick() {
     toggleInstructions();
+    submitNamePlayer();
     
+}
+
+function submitNamePlayer() {
+  let submitNamePlayerButton: any = document.querySelector(".submitNamePlayer")
+
+//Function when user click on submit -enter gamePhase 2 and see the gameMenu
+  submitNamePlayerButton.addEventListener("click", function() {
+    //insert code that show the gameMenu --> gamePhase === 1
+    
+    //test code, should be deleted later
+    submitNamePlayerButton.style.display = "none"
+    
+  })
 }
 
 function toggleInstructions() {
@@ -39,4 +57,6 @@ function toggleInstructions() {
         open = false;
       }
     }); 
-}
+  }
+    
+
