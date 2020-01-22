@@ -98,11 +98,11 @@ header h1 {
     font-size: 1.2rem;
     background: #eee5;
 }
-
 .instructions .toggle-btn {
   position: absolute;
   bottom: 0;
   left: 0;
+
 
   margin: 0.2rem;
   padding: 0.2rem;

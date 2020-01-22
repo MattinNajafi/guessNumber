@@ -1,3 +1,4 @@
+
 class Instructions {
   button: HTMLButtonElement;
   closebtn: HTMLDivElement;
@@ -27,3 +28,4 @@ class Instructions {
     this.modal.style.display = "none";
   }
 }
+
