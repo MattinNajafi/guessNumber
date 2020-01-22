@@ -3,12 +3,15 @@ window.addEventListener("load", init);
 function init(): void {
   setupEventListenersClick();
 
-  const guessSpan: number = 20; //make the user choose this with a range or dropdown
+  const guessSpan: number = 100; //make the user choose this with a range or dropdown
 
   // let instructions = new Instructions()
   let numberGenerator = new NumberGenerator();
   let rng = numberGenerator.random(guessSpan);
   console.log(rng);
+
+  let easyBot = new Easy(lastGuess, numberInput, currentBotGuess);
+  console.log(easyBot.currentBotGuess)
 }
 
 function setupEventListenersClick() {
