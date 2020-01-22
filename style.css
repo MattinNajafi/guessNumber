@@ -1,197 +1,113 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    color:white;
+  margin: 0;
+  padding: 0;
+
+  /* border: 1px solid red; */
 }
 
 body {
-    background: linear-gradient(blue, aqua);
-}
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  background: linear-gradient(blue, aqua);
 
-.wrapper {
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* .mainMenu{
-    display:none;
-} */
 
 header {
-    display: flex;
-    justify-content: center;
+  height: 8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
-    color: white;
-    margin-top: 1rem;
-}
-.input{
-    display: flex;
-    flex-direction: column;
-}
-.input input{
-    box-shadow: 3px 3px 3px black;
-    border: none;
-    color: black;
-    height: 1.8rem;
-    padding: 5px;
+  color: white;
+  top: 1rem;
 }
 
-.input a{
-    text-decoration: none;
-    border:0;
-    padding: 3px 5px;
-    border-radius: 5px;
-    background: lime;
-    align-self: center;
-    margin-top: 1rem;
+.phase {
+  width: 60%;
+}
+.phase-1 {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phase-1 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.smileys{
-    display:flex;
-}
-.smileys p{
-    font-size: 3rem;
+.difficulties {
+  display: none;
 }
 
-#btnControl, #btnControl1, #btnControl2 {
+.buttons {
+  display: none;
+}
+
+.playGame {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
+}
+.playGame a {
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 5px 9px;
+  background: lime;
+  border-radius: 5px;
+}
+
+.help-highscore {
+  display: flex;
+}
+.help-highscore button {
+  background: red;
+  flex-grow: 1;
+}
+.help-highscore a:nth-child(1) {
+  font-size: 1rem;
+  padding: 5px 9px;
+  text-decoration: none;
+  background: orange;
+  border-radius: 5px;
+  flex-grow: 1;
+  margin-right: 0.2rem;
+}
+.help-highscore a:nth-child(2) {
+  font-size: 1rem;
+  padding: 5px 9px;
+  text-decoration: none;
+  background: red;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.instructions {
+}
+.instructions .content {
     display: none;
-}
-
-#btnControl:checked + .btn1{
-    border: 1px solid white;
-    padding: 3px 15px;
-    border-radius: 500px;
-    cursor: pointer;
-}
-
-#btnControl1:checked + .btn2{
-    border: 1px solid white;
-    padding: 3px 10px;
-    border-radius: 500px;
-    cursor: pointer;
-}
-
-#btnControl2:checked + .btn3{
-    border: 1px solid white;
-    padding: 3px 10px;
-    border-radius: 500px;
-    cursor: pointer;
-}
-.bots-div{
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.nrOfBots{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-.nrOfBots label{
-    font-size: 2rem;
-}
-
-.buttons{
-    display: flex;
-    flex-direction: column;
-}
-
-.playGame a{
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 5px 9px;
-    background:lime;
-    border-radius: 5px;
-}
-
-.playGame{
-    display: flex;
-    flex-grow: 1;
-    margin-bottom: 0.5rem;
-}
-.help-highscore{
-    display:flex;
-}
-.help-highscore button{
-    background: red;
-    flex-grow: 1;
-}
-.help-highscore a:nth-child(1){
-    font-size: 1rem;
-    padding: 5px 9px;
-    text-decoration: none;
-    background:orange;
-    border-radius: 5px;
-    flex-grow: 1;
-    margin-right: 0.2rem;
-}
-.help-highscore a:nth-child(2){
-    font-size: 1rem;
-    padding: 5px 9px;
-    text-decoration: none;
-    background:red;
-    border-radius: 5px;
-    flex-grow: 1;
-}
-
-.numberInput {
-    color: black;
-}
-.popup {
-        display: none; 
-        position: fixed; 
-        z-index: 100;
-        padding-top: 250px; 
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-
-    }
-
-  .popup-content {
-    background-color: white;
-    display: flex;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    
     padding: 1rem;
-    width: 80%;
-  }
-
-  .popup-content p {
-      color: black;
-  }
-  .close{
-      background: green;
-      padding: 0.5rem;
-      margin: 0.5rem;
-      border-radius: 0.5rem;
-  }
-  .closeHolder {
-    color:grey;
-    font-size: 1rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-  }
-  .close:hover{
-    color: #000;
-    cursor: pointer;
-  }
+    font-size: 1.2rem;
+    background: #eee5;
+}
+.instructions .toggle-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
 
+  margin: 0.2rem;
+  padding: 0.2rem;
 
+  width: 3rem;
+
+  font-size: 1rem;
+}
