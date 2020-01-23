@@ -1,30 +1,33 @@
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>guessNumber</title>
-  <script defer src="./build/bundle.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<body>
-  <header>
-    <h1>Higher / Lower</h1>
-  </header>
+    <title>Higher / Lower</title>
 
-  <!-- <div class="phase phase-1">
-    <div>
-      <h3>Name:</h3>
-      <input type="text" />
-      <a href="#">Submit</a>
+    <script defer src="./build/bundle.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <header>
+      <h1>HIGHER / LOWER</h1>
+    </header>
+
+    <div class="phase phase-0">
+      <div>
+        <input class="inputPlayerName" type="text" placeholder="Name"/>
+        <a class="submitPlayerName" href="#">Submit</a>
+      </div>
     </div>
-  </div><!-- end of phase 1-->
+    <!-- end of phase 0-->
 
-  <div class="phase phase-2">
-
-    <div class="difficulties">
+    <div class="phase phase-1">
       <button>&#128578;</button>
       <button>&#128528;</button>
       <button>&#128544;</button>
@@ -40,26 +43,25 @@
       </div>
     </div>
 
+      <div class="instructions">
+        <div class="content">
+          <p>
+            det här är instruktionerna : det här är instruktionerna : det här är
+            instruktionerna : det här är instruktionerna : det här är
+            instruktionerna : det här är instruktionerna : det här är
+            instruktionerna : det här är instruktionerna
+          </p>
+        </div>
 
-    <div class="instructions">
-      <div class="content">
-        <p> det här är instruktionerna : det här är instruktionerna : det här är instruktionerna : det här är
-          instruktionerna : det här är instruktionerna : det här är instruktionerna : det här är instruktionerna : det
-          här är instruktionerna</p>
+        <input type="button" value="open" class="toggle-btn" />
       </div>
-
-      <input type="button" value="open" class="toggle-btn">
-
     </div>
+    <!-- end of phase 1-->
 
-  </div> <!-- end of phase 2-->
+    <div class="phase phase-2"></div>
+    <!-- end of phase 2-->
 
-  <div class="phase phase-3">
-  </div><!-- end of phase 3-->
-
-  <div class="phase phase-4">
-  </div> <!-- end of phase 4-->
-
-</body>
-
+    <div class="phase phase-3"></div>
+    <!-- end of phase 3-->
+  </body>
 </html>
