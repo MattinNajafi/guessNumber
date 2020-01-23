@@ -1,30 +1,34 @@
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>guessNumber</title>
-  <script defer src="./build/bundle.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<body>
-  <header>
-    <h1>Higher / Lower</h1>
-  </header>
+    <title>Higher / Lower</title>
 
-  <div class="phase phase-0">
-    <div>
-      <h3>Name:</h3>
-      <input class="inputPlayerName" type="text" />
-      <a class="submitPlayerName" href="#">Submit</a>
+    <script defer src="./build/bundle.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <header>
+      <h1>HIGHER / LOWER</h1>
+    </header>
+
+    <div class="phase phase-0">
+      <div>
+        <input class="inputPlayerName" type="text" placeholder="Name"/>
+        <a class="submitPlayerName" href="#">Submit</a>
+      </div>
     </div>
-  </div><!-- end of phase 0-->
+    <!-- end of phase 0-->
 
-  <div class="phase phase-1">
-
-    <!-- <div class="difficulties">
+    <div class="phase phase-1">
+      <!-- <div class="difficulties">
       <p>&#128578;</p>
       <p>&#128528;</p>
       <p>&#128544;</p>
@@ -40,6 +44,15 @@
       </div>
     </div> -->
 
+      <div class="instructions">
+        <div class="content">
+          <p>
+            det här är instruktionerna : det här är instruktionerna : det här är
+            instruktionerna : det här är instruktionerna : det här är
+            instruktionerna : det här är instruktionerna : det här är
+            instruktionerna : det här är instruktionerna
+          </p>
+        </div>
 
     <div class="instructions">
       <div class="content">
@@ -47,19 +60,13 @@
         <p> If you don´t understand the rules! Don´t play. OK??</p><br>
         <img src="assets/images/anime2.gif" alt="">  
       </div>
-
-      <input type="button" value="open" class="toggle-btn">
-
     </div>
+    <!-- end of phase 1-->
 
-  </div> <!-- end of phase 1-->
+    <div class="phase phase-2"></div>
+    <!-- end of phase 2-->
 
-  <div class="phase phase-2">
-  </div><!-- end of phase 2-->
-
-  <div class="phase phase-3">
-  </div> <!-- end of phase 3-->
-
-</body>
-
+    <div class="phase phase-3"></div>
+    <!-- end of phase 3-->
+  </body>
 </html>
