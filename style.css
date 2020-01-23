@@ -1,95 +1,111 @@
+:root {
+  --primary: #ff4545;
+  --secondary: #a58e44;
+  --dark: #333;
+  --light: #eee;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-  
-    border: 1px solid #f44;
-  }
-  
-  body {
-    font-family: "Orbitron", sans-serif;
-    color: white;
-    background: linear-gradient(blue, aqua);
-    background: #333;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header {
-    height: 8rem;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header h1 {
-    color: white;
-    top: 1rem;
-  }
-  
-  .phase {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .phase-1 {
-    height: 50vh;
-    display: none;
-  }
-  .phase-1 div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .phase-2 {
-  }
-  .phase-3 {
-  }
-  .phase-4 {
-  }
-  
-  .adjust-span {
-    display: flex;
-    flex-direction: column;
-  }
-  .adjust-span > * {
-    font-size: 4rem;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .adjust-span input[type="radio"]{
-      display: block;
-      margin: 1rem;
-  }
-  .adjust-span label:checked{
-      color:yellow; 
-      display: none;
-  }
-  
-  .instructions {
-  }
-  .instructions .content {
-    display: none;
-  
-    padding: 1rem;
-    font-size: 1.2rem;
-    background: #eee5;
-  }
-  .instructions .toggle-btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  
-    margin: 0.2rem;
-    padding: 0.5rem;
-  
-    font-size: 1.5rem;
-    background: #eee;
-    color: #ff4545;
-  }
-  
+  margin: 0;
+  padding: 0;
+
+  /* border: 1px solid #f44; */
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  color: var(--light);
+  background: var(--dark);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  color: white;
+  top: 1rem;
+}
+
+.phase {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phase-1 {
+  height: 50vh;
+  display: none;
+}
+.phase-1 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.phase-2 {
+}
+.phase-3 {
+}
+.phase-4 {
+}
+
+.adjust-span {
+  display: flex;
+  flex-direction: column;
+}
+.adjust-span > * {
+  font-size: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adjust-span input[type="radio"] {
+  display: none;
+  margin: 1rem;
+}
+.adjust-span label {
+  padding: 1rem;
+  margin: 0.5rem;
+
+  color: var(--secondary);
+  border: 0.1rem solid var(--secondary);
+  background: var(--triary);
+
+  transition: 0.2s ease;
+}
+.adjust-span label.checked-label {
+  color: var(--triary);
+  border: 0.1rem solid var(--triary);
+  background: var(--secondary);
+}
+
+.instructions {
+}
+.instructions .content {
+  display: none;
+
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: #eee5;
+}
+.instructions .toggle-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  margin: 0.2rem;
+  padding: 0.5rem;
+
+  font-size: 1.5rem;
+  background: #eee;
+  color: #ff4545;
+}
