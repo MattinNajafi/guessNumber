@@ -64,6 +64,8 @@ header h1 {
 .adjust-span > * {
   font-size: 4rem;
 
+  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,14 +79,14 @@ header h1 {
   margin: 0.5rem;
 
   color: var(--secondary);
-  border: 0.1rem solid var(--secondary);
+  border: 0.2rem solid var(--secondary);
   background: var(--triary);
 
   transition: 0.2s ease;
 }
 .adjust-span label.checked-label {
   color: var(--triary);
-  border: 0.1rem solid var(--triary);
+  border: 0.2rem solid var(--secondary);
   background: var(--secondary);
 }
 
