@@ -1,12 +1,21 @@
-* {
+:root {
+  --primary: #ff4545;
+  --secondary: #a58e44;
+  --dark: #333;
+  --light: #eee;
+}
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
 
-  /* border: 1px solid red; */
+  /* border: 1px solid #f44; */
 }
 
 body {
-  font-family: 'Marvel', sans-serif;
+  font-family: "Marvel", sans-serif;
   color: rgb(255, 255, 255);
   background: rgb(185, 0, 0);
   display: flex;
@@ -23,7 +32,7 @@ header {
 
 header h1 {
   color: rgb(255, 255, 255);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 4rem;
   padding: 0;
   margin: 0;
@@ -64,15 +73,61 @@ header h1 {
   width: 60%;
 }
 .phase-0 {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 .phase-0 div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.phase-1 {
+  display: none;
+}
+.phase-1 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.phase-2 {
+  display: none;
+}
+.phase-3 {
+  display: none;
+}
+
+.adjust-span {
+  display: flex;
+  flex-direction: column;
+}
+.adjust-span > * {
+  font-size: 4rem;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adjust-span input[type="radio"] {
+  display: none;
+  margin: 1rem;
+}
+.adjust-span label {
+  padding: 1rem;
+  margin: 0.5rem;
+
+  color: var(--secondary);
+  border: 0.2rem solid var(--secondary);
+  background: var(--triary);
+
+  transition: 0.2s ease;
+}
+.adjust-span label.checked-label {
+  color: var(--triary);
+  border: 0.2rem solid var(--secondary);
+  background: var(--secondary);
 }
 
 .difficulties {
@@ -121,15 +176,12 @@ header h1 {
   flex-grow: 1;
 }
 
-.instructions {
-}
-
 .instructions .content {
-    display: none;
-    
-    padding: 1rem;
-    font-size: 1.2rem;
-    background: #eee5;
+  display: none;
+
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: #eee5;
 }
 
 .instructions .toggle-btn {
