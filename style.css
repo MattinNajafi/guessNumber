@@ -5,7 +5,9 @@
   --light: #eee;
 }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
 
@@ -35,14 +37,34 @@ header h1 {
   top: 1rem;
 }
 
+button {
+  margin: 0.2rem;
+  padding: 0.1rem 0.5rem;
+
+  font-size: 0.8rem;
+  background: var(--primary);
+  border: 0.2rem groove var(--dark);
+  color: var(--dark);
+}
+
 .phase {
   width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.phase-0 {
+  display: block;
+}
+.phase-0 div { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .phase-1 {
-  height: 50vh;
   display: none;
 }
 .phase-1 div {
@@ -51,10 +73,10 @@ header h1 {
   align-items: center;
 }
 .phase-2 {
+  display: none;
 }
 .phase-3 {
-}
-.phase-4 {
+  display: none;
 }
 
 .adjust-span {
@@ -90,24 +112,27 @@ header h1 {
   background: var(--secondary);
 }
 
-.instructions {
-}
+/* .instructions {} */
 .instructions .content {
   display: none;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 
   padding: 1rem;
   font-size: 1.2rem;
   background: #eee5;
+  border-left: 1rem solid var(--primary);
 }
 .instructions .toggle-btn {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 0;
+  right: 0;
+}
 
-  margin: 0.2rem;
-  padding: 0.5rem;
-
-  font-size: 1.5rem;
-  background: #eee;
-  color: #ff4545;
+/* --- TESTBUTTON --- */
+.TEST {
+  position: absolute;
+  top: 0;
 }

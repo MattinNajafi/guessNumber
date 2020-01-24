@@ -1,4 +1,4 @@
-class EventListenersClick {
+class ClickEvents {
   public toggleInstructions(): void {
     let toggleBtn: any = document.querySelector(".toggle-btn");
     let content: any = document.querySelector(".instructions .content");
@@ -36,20 +36,37 @@ class EventListenersClick {
         if (spanRadios[i].checked) {
           spanLabels[i].classList.add("checked-label");
           guessSpan = parseInt(spanRadios[i].value);
-          console.log("1 : " + guessSpan);
         }
-        console.log("2 : " + guessSpan);
       });
-      console.log("3 : " + guessSpan);
     }
     console.log("4 : " + guessSpan);
     return guessSpan;
   }
 
   public testButton(logtext: number | string) {
-    let testButton = document.querySelector(".TEST");
+    let testButton: any = document.querySelector(".TEST");
     testButton.addEventListener("click", function() {
       console.log(logtext);
     });
   }
+  public submitPlayerName(gamePhase: number) {
+    let submitNameButton: any = document.querySelector(".submitNameButton");
+    let inputNameField: any = document.querySelector(".inputNameField");
+    gamePhase = gamePhase;
+
+    submitNameButton.addEventListener("click", function(gamePhase: number) {
+      // if submit button is pressed and the game is in the first phase go to next phase
+      if (!(inputNameField.value == "")) {
+        console.log("next phase");
+
+        gamePhase = 1;
+        updatePhase(gamePhase);
+      } else if (inputNameField.value == "") {
+        console.log("enter name!");
+      }
+
+      //else display a red border around the input field
+    });
+  }
+
 }
