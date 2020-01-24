@@ -15,7 +15,7 @@ class NumberCheck {
     }
 
 
-    public checkNumber(): void {
+    public checkNumber(randomNumber: number): void {
     playerGuess = Number(numberInput);
 
 
@@ -35,7 +35,12 @@ class NumberCheck {
  console.log("hej")
 
     
-}
-
-
+    if (numberInput == randomNumber) {
+      message.textContent = "YOU WIN!";
+    } else if (numberInput < randomNumber) {
+      message.textContent = "TOO LOW!";
+    } else if (numberInput > randomNumber) {
+      message.textContent = "TOO HIGH!";
+    }
+  }
 }

@@ -1,5 +1,5 @@
 class NumberGenerator {
-  public random(guessSpan: number): number {
+  random(guessSpan: number): number {
     let randomNumber: number = Math.ceil(Math.random() * guessSpan);
     return randomNumber;
   }
