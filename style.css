@@ -1,138 +1,143 @@
-:root {
-  --primary: #ff4545;
-  --secondary: #a58e44;
-  --dark: #333;
-  --light: #eee;
-}
-
-*,
-*::after,
-*::before {
+* {
   margin: 0;
   padding: 0;
 
-  /* border: 1px solid #f44; */
+  /* border: 1px solid red; */
 }
 
 body {
-  font-family: "Orbitron", sans-serif;
-  color: var(--light);
-  background: var(--dark);
-
+  font-family: 'Marvel', sans-serif;
+  color: rgb(255, 255, 255);
+  background: rgb(185, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 header {
-  height: 8rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 header h1 {
-  color: white;
-  top: 1rem;
+  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
 }
 
-button {
-  margin: 0.2rem;
-  padding: 0.1rem 0.5rem;
+.inputPlayerName {
+  height: auto;
+  width: 15rem;
+  border: 0.2rem solid rgb(190, 190, 190);
+  border-radius: 0.6rem;
+  outline: none;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
 
-  font-size: 0.8rem;
-  background: var(--primary);
-  border: 0.2rem groove var(--dark);
-  color: var(--dark);
+.inputPlayerName:focus {
+  border-color: rgb(255, 145, 0);
+}
+
+.submitPlayerName {
+  background-color: white;
+  color: rgb(185, 0, 0);
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: x-large;
+  border-radius: 0.6rem;
+}
+
+.submitPlayerName:hover {
+  background-color: rgb(255, 145, 0);
 }
 
 .phase {
   width: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
 .phase-0 {
-  display: block;
-}
-.phase-0 div { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.phase-1 {
-  display: none;
-}
-.phase-1 div {
+  height: 50vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-.phase-2 {
-  display: none;
-}
-.phase-3 {
-  display: none;
-}
-
-.adjust-span {
-  display: flex;
-  flex-direction: column;
-}
-.adjust-span > * {
-  font-size: 4rem;
-
-  cursor: pointer;
-
-  display: flex;
   justify-content: center;
+}
+.phase-0 div {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.adjust-span input[type="radio"] {
+
+.difficulties {
   display: none;
-  margin: 1rem;
-}
-.adjust-span label {
-  padding: 1rem;
-  margin: 0.5rem;
-
-  color: var(--secondary);
-  border: 0.2rem solid var(--secondary);
-  background: var(--triary);
-
-  transition: 0.2s ease;
-}
-.adjust-span label.checked-label {
-  color: var(--triary);
-  border: 0.2rem solid var(--secondary);
-  background: var(--secondary);
 }
 
-/* .instructions {} */
+.buttons {
+  display: none;
+}
+
+.playGame {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
+}
+.playGame a {
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 5px 9px;
+  background: lime;
+  border-radius: 5px;
+}
+
+.help-highscore {
+  display: flex;
+}
+.help-highscore button {
+  background: red;
+  flex-grow: 1;
+}
+.help-highscore a:nth-child(1) {
+  font-size: 1rem;
+  padding: 5px 9px;
+  text-decoration: none;
+  background: orange;
+  border-radius: 5px;
+  flex-grow: 1;
+  margin-right: 0.2rem;
+}
+.help-highscore a:nth-child(2) {
+  font-size: 1rem;
+  padding: 5px 9px;
+  text-decoration: none;
+  background: red;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.instructions {
+}
+
 .instructions .content {
-  display: none;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  padding: 1rem;
-  font-size: 1.2rem;
-  background: #eee5;
-  border-left: 1rem solid var(--primary);
+    display: none;
+    
+    padding: 1rem;
+    font-size: 1.2rem;
+    background: #eee5;
 }
+
 .instructions .toggle-btn {
   position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* --- TESTBUTTON --- */
-.TEST {
-  position: absolute;
-  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 3rem;
+  font-size: 1rem;
 }
