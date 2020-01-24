@@ -1,63 +1,70 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Higher / Lower</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>guessNumber</title>
+  <script defer src="./build/bundle.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet" />
+</head>
 
-    <script defer src="./build/bundle.js"></script>
+<body>
+  <header>
+    <h1>Higher / Lower</h1>
+  </header>
 
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    
-  </head>
-
-  <body>
-    <header>
-      <h1>HIGHER / LOWER</h1>
-    </header>
-
-    <div class="phase phase-0">
-      <div>
-        <input class="inputPlayerName" type="text" placeholder="Name"/>
-        <a class="submitPlayerName" href="#">Submit</a>
-      </div>
+  <div class="phase phase-0">
+    <div>
+      <h3>Name:</h3>
+      <input type="text" placeholder="name:" class="inputNameField" />
+      <button class="submitNameButton">SUBMIT</button>
     </div>
-    <!-- end of phase 0-->
+  </div>
+  <!-- end of phase 0-->
 
-    <div class="phase phase-1">
-      <!-- <div class="difficulties">
-      <p>&#128578;</p>
-      <p>&#128528;</p>
-      <p>&#128544;</p>
+  <div class="phase phase-1">
+
+    <div class="adjust-span">
+      <label for="span-radio-1" class="checked-label">20
+        <input type="radio" id="span-radio-1" name="span" value="20" checked>
+      </label>
+      <label for="span-radio-2">50
+        <input type="radio" id="span-radio-2" name="span" value="50">
+      </label>
+      <label for="span-radio-3">100
+        <input type="radio" id="span-radio-3" name="span" value="100">
+      </label>
     </div>
 
-    <div class="buttons">
-      <div class="playGame">
-        <a id="playBtn" href="#">Play Game</a>
-      </div>
-      <div class="help-highscore">
-        <button id="help">HELP</button>
-        <button id="highscore">HIGHSCORE</button>
-      </div>
-    </div> -->
+  </div>
+  <!-- end of phase 1-->
 
-    <input type="button" value="open" class="toggle-btn" />
-    <div class="instructions">
-      <div class="content">
-        <h3>HOW TO PLAY THE GAME</h3><br>
-        <p> If you don´t understand the rules! Don´t play. OK??</p><br>
-        <img src="assets/images/anime2.gif" alt="">  
-      </div>
+  <div class="phase phase-2">
+    <h2>phase_3</h2>
+  </div>
+  <!-- end of phase 2-->
+
+  <div class="phase phase-3">
+    <h2>phase_3</h2>
+  </div>
+  <!-- end of phase 3-->
+
+
+  <div class="instructions">
+    <div class="content">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptatum accusantium rerum illo magni
+        eligendi at natus, tenetur ipsum in earum tempora error blanditiis officia quas perspiciatis numquam corporis
+        nisi!
+      </p>
     </div>
-    <!-- end of phase 1-->
 
-    <div class="phase phase-2"></div>
-    <!-- end of phase 2-->
+    <button class="toggle-btn">OPEN</button>
+  </div>
 
-    <div class="phase phase-3"></div>
-    <!-- end of phase 3-->
-  </body>
+  <button class="TEST">TEST</button>
+</body>
+
 </html>

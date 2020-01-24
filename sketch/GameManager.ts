@@ -26,26 +26,22 @@ function updatePhase(gamePhase: number): void {
   let phase_3: any = document.querySelector(".phase-3");
 
   if (gamePhase == 0) {
-    console.log(phase_0);
     phase_0.style.display = "block";
     phase_1.style.display = "none";
     phase_2.style.display = "none";
     phase_3.style.display = "none";
   } else if (gamePhase == 1) {
-    console.log(phase_1);
     phase_0.style.display = "none";
     phase_1.style.display = "block";
     phase_2.style.display = "none";
     phase_3.style.display = "none";
 
   } else if (gamePhase == 2) {
-    console.log(phase_2);
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "block";
     phase_3.style.display = "none";
   } else if (gamePhase == 3) {
-    console.log(phase_3);
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "none";
