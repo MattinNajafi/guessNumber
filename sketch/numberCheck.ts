@@ -1,13 +1,23 @@
 let numberInput: number;
 let message: HTMLBodyElement; 
-let guess: number;
+let playerGuess: number;
+let numberInputSubmit: any;
+
 
 class NumberCheck {
     public numberInput = document.querySelector(".numberInput");
     public message = document.querySelector(".message");
-    
-public checkNumber(): void {
-    guess = Number(numberInput);
+    public numberInputSubmit = document.querySelector(".numberInputSubmit")
+
+    public getEventListener() {
+        numberInputSubmit.addEventListener("click", this.checkNumber)
+        console.log("hej")
+    }
+
+
+    public checkNumber(): void {
+    playerGuess = Number(numberInput);
+
 
         if (numberInput == randomNumber) {
            message.textContent = "YOU WIN!"
@@ -21,6 +31,8 @@ public checkNumber(): void {
             message.textContent = "TOO HIGH!"
         }
 
+
+ console.log("hej")
 
     
 }

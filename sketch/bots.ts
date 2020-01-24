@@ -18,6 +18,20 @@ class Bots {
 }
 
 class Easy extends Bots {
+  public botBehaviourEasy() {
+  
+    if (message.textContent == "TOO HIGH!") {
+      this.botGuess()
+    }
+    
+    else if (message.textContent == "TOO LOW!") {
+      this.botGuess()
+    }
+
+
+  }
+  
+  
   public botGuess(): number {
     return this.currentBotGuess;
   }

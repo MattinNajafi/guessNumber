@@ -20,8 +20,12 @@ function init(): void {
   let rng = numberGenerator.random(guessSpan);
   console.log(rng);
 
+  let checkPlayerGuess = new NumberCheck();
+  
+
   let easyBot = new Easy(lastGuess, numberInput, currentBotGuess);
   console.log(easyBot.currentBotGuess)
+
 
 }
 
