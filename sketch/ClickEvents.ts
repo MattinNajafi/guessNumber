@@ -69,4 +69,17 @@ class ClickEvents {
     });
   }
 
+  public chooseBot(gamePhase:number){
+    let startGameButton: any = document.querySelector(".startGameButton")
+    gamePhase = gamePhase
+
+    startGameButton.addEventListener("click",function(gamePhase: number){
+      gamePhase = 2;
+      updatePhase(gamePhase);
+    
+    })
+  }
+
+
+
 }
