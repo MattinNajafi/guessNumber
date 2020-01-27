@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 0;
+  let gamePhase: number = 1;
   const clickEvents = new ClickEvents();
 
   //Initiate clickevents
@@ -15,6 +15,7 @@ function init(): void {
   clickEvents.toggleInstructions();
   clickEvents.testButton("TEST")
   clickEvents.guessSpanRadios()
+  clickEvents.chooseBot(gamePhase);
 
   updatePhase(gamePhase);
 }
