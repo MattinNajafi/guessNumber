@@ -7,14 +7,20 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 0;
+  let gamePhase: number = 2;
   const clickEvents = new ClickEvents();
+  const keyEvents = new KeyEvents();
+  // const computer = new CPU();
+  
 
   //Initiate clickevents
   clickEvents.submitPlayerName(gamePhase);
   clickEvents.toggleInstructions();
-  clickEvents.testButton("TEST")
-  clickEvents.guessSpanRadios()
+  clickEvents.testButton("TEST");
+  clickEvents.guessSpanRadios();
+
+  // Initiate keyevents
+  keyEvents.submitYourGuess();
 
   updatePhase(gamePhase);
 }
@@ -35,12 +41,17 @@ function updatePhase(gamePhase: number): void {
     phase_1.style.display = "block";
     phase_2.style.display = "none";
     phase_3.style.display = "none";
-
   } else if (gamePhase == 2) {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "block";
     phase_3.style.display = "none";
+
+    setInputFilter(document.getElementById("intLimitTextBox"), function(
+      value: string
+    ) {
+      return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 20);
+    });
   } else if (gamePhase == 3) {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
@@ -54,4 +65,29 @@ function updatePhase(gamePhase: number): void {
   let numberGenerator = new NumberGenerator();
   let rng = numberGenerator.random(guessSpan);
   console.log(rng);
+}
+function setInputFilter(textbox: any, inputFilter: any) {
+  [
+    "input",
+    "keydown",
+    "keyup",
+    "mousedown",
+    "mouseup",
+    "select",
+    "contextmenu",
+    "drop"
+  ].forEach(function(event) {
+    textbox.addEventListener(event, function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+      }
+    });
+  });
 }
