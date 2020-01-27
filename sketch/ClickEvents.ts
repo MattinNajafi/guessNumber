@@ -57,7 +57,7 @@ class ClickEvents {
     submitNameButton.addEventListener("click", function(gamePhase: number) {
       // if submit button is pressed and the game is in the first phase go to next phase
       if (!(inputNameField.value == "")) {
-        console.log("next phase");
+        saveToLocalStorage()
 
         gamePhase = 1;
         updatePhase(gamePhase);
