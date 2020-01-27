@@ -6,28 +6,22 @@
     <title>guessNumber</title>
     <script defer src="./build/bundle.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/7113c761e0.js"
-      crossorigin="anonymous"
-    ></script>
     <link
-      href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Quicksand&display=swap"
+      href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
     <header>
-      <img src="assets/logo.png" />
+      <h1>Higher / Lower</h1>
     </header>
 
     <div class="phase phase-0">
       <div>
         <h3>Name:</h3>
         <input type="text" placeholder="name:" class="inputNameField" />
-        <button class="submitNameButton">
-          SUBMIT <i class="fas fa-chevron-right"></i>
-        </button>
+        <button class="submitNameButton">SUBMIT</button>
       </div>
     </div>
     <!-- end of phase 0-->
@@ -53,12 +47,13 @@
           <input type="radio" id="span-radio-3" name="span" value="100" />
         </label>
       </div>
-      <div class="difficulties">
-        <button class="easy">
-          <img src="assets/images/deep-learning.png" />
-        </button>
-        <button class="medium"><img src="assets/images/roboto.png" /></button>
-        <button class="hard"><img src="assets/images/cs.png" /></button>
+      <div class="botButtons">
+        <button class="easy">easy</button>
+        <button class="medium">medium</button>
+        <button class="hard">hard</button>
+      </div>
+      <div>
+        <button class="startGameButton">START GAME</button>
       </div>
     </div>
     <!-- end of phase 1-->
@@ -87,7 +82,7 @@
         <img src="assets/images/anime2.gif" alt="" />
       </div>
 
-      <button class="toggle-btn">HELP</button>
+      <button class="toggle-btn">OPEN</button>
     </div>
 
     <button class="TEST">TEST</button>

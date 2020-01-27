@@ -17,10 +17,9 @@
 body {
   font-family: "Marvel", sans-serif;
   color: rgb(255, 255, 255);
-  background-image: linear-gradient(to top left, #389596, #82d5d6);
+  background: rgb(185, 0, 0);
   display: flex;
   flex-direction: column;
-  height: 100%;
   align-items: center;
 }
 
@@ -86,10 +85,25 @@ header h1 {
 .phase-1 {
   display: none;
 }
+
 .phase-1 div {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
+
+.phase-1 .startGameButton {
+  font-size: 40;
+  background: none;
+  border: none;
+}
+
+.botButtons button {
+  font-size: 70;
+  background: none;
+  border: none;
+}
+
 .phase-2 {
   display: none;
 }
@@ -99,18 +113,19 @@ header h1 {
 
 .adjust-span {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 .adjust-span > * {
-  font-size: 3rem;
+  font-size: 4rem;
 
   cursor: pointer;
 
   display: flex;
   justify-content: center;
   align-items: center;
-}
-*/ .phase-1 {
+} */
+
+.phase-1 {
   /* display: none; */
   display: flex;
   justify-content: center;
@@ -135,70 +150,6 @@ header h1 {
   background: var(--secondary);
 }
 
-.phase-1 button {
-  font-size: 100;
-  background: none;
-  border: none;
-}
-
-button {
-  background: #0a6868;
-  padding: 0.6rem;
-  border: none;
-  /* border-radius: 0.5rem; */
-  color: #aad1d2;
-  margin: 0.5rem;
-  font-family: "quicksand", sans-serif;
-  font-size: 1rem;
-}
-
-button:hover {
-  background: #085151;
-  cursor: pointer;
-}
-/* .buttons { */
-/* display: none; */
-/* } */
-
-.playGame {
-  display: flex;
-  flex-grow: 1;
-  margin-bottom: 0.5rem;
-  justify-content: center;
-}
-.playGame a {
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 5px 9px;
-  background: lime;
-  border-radius: 5px;
-}
-
-.help-highscore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.help-highscore button {
-  background: red;
-}
-.help-highscore a:nth-child(1) {
-  font-size: 1rem;
-  padding: 5px 9px;
-  text-decoration: none;
-  background: orange;
-  border-radius: 5px;
-  flex-grow: 1;
-  margin-right: 0.2rem;
-}
-.help-highscore a:nth-child(2) {
-  font-size: 1rem;
-  padding: 5px 9px;
-  text-decoration: none;
-  background: red;
-  border-radius: 5px;
-  flex-grow: 1;
-}
 
 .instructions .content {
   display: none;
@@ -216,14 +167,4 @@ button:hover {
   padding: 0.2rem;
   width: 3rem;
   font-size: 1rem;
-}
-
-.difficulties {
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-}
-
-.difficulties button {
-  background: none;
 }

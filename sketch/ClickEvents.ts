@@ -70,10 +70,10 @@ class ClickEvents {
   }
 
   public chooseBot(gamePhase:number){
-    let easyBtn: any = document.querySelector(".easy")
+    let startGameButton: any = document.querySelector(".startGameButton")
     gamePhase = gamePhase
 
-    easyBtn.addEventListener("click",function(gamePhase: number){
+    startGameButton.addEventListener("click",function(gamePhase: number){
       gamePhase = 2;
       updatePhase(gamePhase);
     
