@@ -15,6 +15,7 @@ function init(): void {
   clickEvents.toggleInstructions();
   clickEvents.testButton("TEST")
   clickEvents.guessSpanRadios()
+  clickEvents.chooseBot(gamePhase);
 
   updatePhase(gamePhase);
 }
