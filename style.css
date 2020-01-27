@@ -17,7 +17,7 @@
 body {
   font-family: "Marvel", sans-serif;
   color: rgb(255, 255, 255);
-  background: rgb(185, 0, 0);
+  background-image: linear-gradient(to top left, #389596, #82d5d6);
   display: flex;
   flex-direction: column;
   align-items: center;
