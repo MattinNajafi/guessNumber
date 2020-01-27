@@ -1,5 +1,5 @@
 function saveToLocalStorage(){
-    let playerName: any = document.getElementById("inputPlayerName")
+    let playerName: any = document.querySelector(".inputNameField")
     let playerNameValue: string = playerName.value
     localStorage.setItem("name", playerNameValue)
 }
