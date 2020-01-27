@@ -110,6 +110,12 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+.phase-1 {
+  /* display: none; */
+  display: flex;
+  justify-content: center;
 }
 .adjust-span input[type="radio"] {
   display: none;
@@ -131,8 +137,10 @@ header h1 {
   background: var(--secondary);
 }
 
-.difficulties {
-  display: none;
+.phase-1 button {
+  font-size: 100;
+  background: none;
+  border: none;
 }
 
 button{
@@ -153,15 +161,16 @@ button:hover{
 
 }
 .buttons {
-  display: none;
+  /* display: none; */
 }
 .playGame {
   display: flex;
   flex-grow: 1;
   margin-bottom: 0.5rem;
+  justify-content: center; 
 }
 .playGame a {
-  font-size: 2rem;
+  font-size: 1rem;
   text-decoration: none;
   padding: 5px 9px;
   background: lime;
@@ -170,10 +179,11 @@ button:hover{
 
 .help-highscore {
   display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 .help-highscore button {
   background: red;
-  flex-grow: 1;
 }
 .help-highscore a:nth-child(1) {
   font-size: 1rem;
