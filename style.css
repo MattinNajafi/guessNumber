@@ -136,11 +136,14 @@ header h1 {
 
 button{
   background: #0a6868;
-  padding: 0.5rem;
-  border:none;
-  border-radius: 0.5rem;
+  padding: 0.6rem;
+border:none;
+  /* border-radius: 0.5rem; */
   color: #aad1d2;
-  margin: 0.2rem;
+  margin: 0.5rem;
+  font-family: 'quicksand', sans-serif;
+  font-size: 1rem;
+
 }
 
 button:hover{
@@ -151,7 +154,6 @@ button:hover{
 .buttons {
   display: none;
 }
-
 .playGame {
   display: flex;
   flex-grow: 1;
