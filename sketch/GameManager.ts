@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 0;
+  let gamePhase: number = 1;
   const clickEvents = new ClickEvents();
 
   //Initiate clickevents
@@ -54,4 +54,12 @@ function updatePhase(gamePhase: number): void {
   let numberGenerator = new NumberGenerator();
   let rng = numberGenerator.random(guessSpan);
   console.log(rng);
+
+
+  let checkPlayerGuess = new NumberCheck();
+  
+  let easyBot = new Easy(lastGuess, numberInput, currentBotGuess);
+  console.log(easyBot.currentBotGuess)
+
 }
+

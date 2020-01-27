@@ -69,4 +69,19 @@ class ClickEvents {
     });
   }
 
+
+  public startGameButtons(gamePhase: number) {
+    let easyButton: any = document.querySelector(".easy")
+    gamePhase = gamePhase;
+
+    easyButton.addEventListener("click", function(gamePhase:number) {
+      gamePhase = 2;
+      updatePhase(gamePhase);
+    })
+  }
+
+
+
+
+  
 }
