@@ -85,11 +85,25 @@ header h1 {
 .phase-1 {
   display: none;
 }
+
 .phase-1 div {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
+
+.phase-1 .startGameButton {
+  font-size: 40;
+  background: none;
+  border: none;
+}
+
+.botButtons button {
+  font-size: 70;
+  background: none;
+  border: none;
+}
+
 .phase-2 {
   display: none;
 }
@@ -109,6 +123,12 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+.phase-1 {
+  /* display: none; */
+  display: flex;
+  justify-content: center;
 }
 .adjust-span input[type="radio"] {
   display: none;
@@ -130,51 +150,6 @@ header h1 {
   background: var(--secondary);
 }
 
-.difficulties {
-  display: none;
-}
-
-.buttons {
-  display: none;
-}
-
-.playGame {
-  display: flex;
-  flex-grow: 1;
-  margin-bottom: 0.5rem;
-}
-.playGame a {
-  font-size: 2rem;
-  text-decoration: none;
-  padding: 5px 9px;
-  background: lime;
-  border-radius: 5px;
-}
-
-.help-highscore {
-  display: flex;
-}
-.help-highscore button {
-  background: red;
-  flex-grow: 1;
-}
-.help-highscore a:nth-child(1) {
-  font-size: 1rem;
-  padding: 5px 9px;
-  text-decoration: none;
-  background: orange;
-  border-radius: 5px;
-  flex-grow: 1;
-  margin-right: 0.2rem;
-}
-.help-highscore a:nth-child(2) {
-  font-size: 1rem;
-  padding: 5px 9px;
-  text-decoration: none;
-  background: red;
-  border-radius: 5px;
-  flex-grow: 1;
-}
 
 .instructions .content {
   display: none;
