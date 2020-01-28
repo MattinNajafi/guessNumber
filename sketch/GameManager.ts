@@ -8,21 +8,29 @@ window.addEventListener("load", init);
 
 function init(): void {
   let gamePhase: number = 2;
+  let guessSpan: number = 20; //make the user choose this with a range or dropdown
+  let yourTurn: boolean = true;
+
   const clickEvents = new ClickEvents();
   const keyEvents = new KeyEvents();
-  // const computer = new CPU();
-  
+  const computer = new CPU();
 
   //Initiate clickevents
-  clickEvents.submitPlayerName(gamePhase);
+  clickEvents.testButton(computer.info);
   clickEvents.toggleInstructions();
-  clickEvents.testButton("TEST");
+  clickEvents.submitPlayerName(gamePhase);
   clickEvents.guessSpanRadios();
 
   // Initiate keyevents
-  keyEvents.submitYourGuess();
+  keyEvents.submitYourGuess(computer, gamePhase, yourTurn);
 
   updatePhase(gamePhase);
+
+  setInputFilter(document.getElementById("intLimitTextBox"), function(
+    value: string
+  ) {
+    return /^\d*$/.test(value) && (value === "" || parseInt(value) <= guessSpan);
+  });
 }
 
 function updatePhase(gamePhase: number): void {
@@ -36,35 +44,37 @@ function updatePhase(gamePhase: number): void {
     phase_1.style.display = "none";
     phase_2.style.display = "none";
     phase_3.style.display = "none";
+
+    // input name
   } else if (gamePhase == 1) {
     phase_0.style.display = "none";
     phase_1.style.display = "block";
     phase_2.style.display = "none";
     phase_3.style.display = "none";
+
+    // main manu
+    // choose bot
+    // guessspan ??
+    // play
   } else if (gamePhase == 2) {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "block";
     phase_3.style.display = "none";
 
-    setInputFilter(document.getElementById("intLimitTextBox"), function(
-      value: string
-    ) {
-      return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 20);
-    });
+    // game phase
+    // guess if it's your turn
+    // correct awnser = win
+    // incorrect answer 
   } else if (gamePhase == 3) {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "none";
     phase_3.style.display = "block";
+
+    // show highscore
+    // play again
   }
-
-  const guessSpan: number = 20; //make the user choose this with a range or dropdown
-
-  // let instructions = new Instructions()
-  let numberGenerator = new NumberGenerator();
-  let rng = numberGenerator.random(guessSpan);
-  console.log(rng);
 }
 function setInputFilter(textbox: any, inputFilter: any) {
   [
