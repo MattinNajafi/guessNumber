@@ -181,11 +181,15 @@ button:hover{
 .instructions .content {
   display: none;
   position: absolute;
-  height: 10rem;
-  margin: auto;
+  width: 24rem;
+  height: 14rem;
+  top: 50%;
+  margin-top: -7rem;
+  left: 50%;
+  margin-left: -12rem; 
   padding: 1rem;
-  font-size: 1.2rem;
-  background: #eee5;
+  font-size: 1.5rem;
+  background: #aad1d2e2;
 }
 
 .instructions .toggle-btn {
