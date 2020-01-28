@@ -30,6 +30,7 @@ h3{
   color: #fff;
   font-family: 'Raleway', sans-serif;
 }
+
 header {
   display: flex;
   justify-content: center;
@@ -179,7 +180,9 @@ button:hover{
 
 .instructions .content {
   display: none;
-
+  position: absolute;
+  height: 10rem;
+  margin: auto;
   padding: 1rem;
   font-size: 1.2rem;
   background: #eee5;
@@ -209,14 +212,14 @@ button:hover{
 .phase-2 .player-input {
   width: 4rem;
   height: 2.5rem;
-  margin: 1rem;
+  margin: 1.5 0.5rem;
   text-align: center;
   font-size: 1.5rem;
   color:  #085151;
 }
 
-.phase-2 button {
-  font-size: 1.2rem;
+.phase-2 .guessButton {
+  font-size: 1.5rem;
 } 
 
 .messageFromGameManager, botGuess {
