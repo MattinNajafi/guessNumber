@@ -125,12 +125,6 @@ button:hover{
   border: none;
 }
 
-.botButtons button {
-  font-size: 70;
-  background: none;
-  border: none;
-}
-
 .phase-2 {
   display: none;
 }
@@ -176,6 +170,30 @@ button:hover{
   background: var(--secondary);
 }
 
+/*Bot buttons style*/
+
+.botButtons input[type="radio"] {
+  display: none;
+}
+
+.botButtons label {
+  padding: 1rem;
+  margin: 0.5rem;
+
+  color: var(--secondary);
+  border: 0.2rem solid var(--secondary);
+  background: var(--triary);
+
+  transition: 0.2s ease;
+}
+
+.botButtons label .bot{
+  color: var(--triary);
+  border: 0.2rem solid var(--secondary);
+  background: black;
+}
+
+/*Bot buttons style END*/
 
 .instructions .content {
   display: none;

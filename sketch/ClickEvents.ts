@@ -43,6 +43,28 @@ class ClickEvents {
     return guessSpan;
   }
 
+  botButtonsRadios(): any {
+    let botRadios: any = document.querySelectorAll(
+      ".botButtons input[type='radio']"
+    );
+    let botLabels: any = document.querySelectorAll(".botButtons label");
+
+    for (let i = 0; i < botRadios.length; i++) {
+      botRadios[i].addEventListener("input") 
+      {
+        for (let j = 0; j < botRadios.length; j++) {
+          if (!botRadios[j].checked) {
+            botLabels[j].classList.remove(".bot");
+          }
+        }
+        if (botRadios[i].checked) {
+          botLabels[i].classList.add(".bot");
+        }
+      };
+    }
+
+  }
+
   public testButton(logtext: number | string) {
     let testButton: any = document.querySelector(".TEST");
     testButton.addEventListener("click", function() {
@@ -69,7 +91,7 @@ class ClickEvents {
     });
   }
 
-  public chooseBot(gamePhase:number){
+  public startGame(gamePhase:number){
     let startGameButton: any = document.querySelector(".startGameButton")
     gamePhase = gamePhase
 
