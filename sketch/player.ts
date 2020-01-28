@@ -1,7 +1,12 @@
 function saveToLocalStorage(){
     let playerName: any = document.querySelector(".inputNameField")
     let playerNameValue: string = playerName.value
-    localStorage.setItem("name", playerNameValue)
+    localStorage.setItem("name", JSON.stringify(playerNameValue))
+}
+
+function getFromLocalStorage() {
+    let playerName = JSON.parse(localStorage.getItem("name") as string)
+    console.log(playerName)
 }
 
 // class ScoreTable {

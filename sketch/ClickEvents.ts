@@ -58,6 +58,7 @@ class ClickEvents {
       // if submit button is pressed and the game is in the first phase go to next phase
       if (!(inputNameField.value == "")) {
         saveToLocalStorage()
+        getFromLocalStorage()
 
         gamePhase = 1;
         updatePhase(gamePhase);
