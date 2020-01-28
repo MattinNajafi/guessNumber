@@ -7,17 +7,31 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 0;
+  let gamePhase: number = 2;
+  let guessSpan: number = 20; //make the user choose this with a range or dropdown
+  let yourTurn: boolean = true;
+
   const clickEvents = new ClickEvents();
+  const keyEvents = new KeyEvents();
+  const computer = new CPU();
 
   //Initiate clickevents
-  clickEvents.submitPlayerName(gamePhase);
+  clickEvents.testButton(computer.info);
   clickEvents.toggleInstructions();
-  clickEvents.testButton("TEST")
-  clickEvents.guessSpanRadios()
-  clickEvents.chooseBot(gamePhase);
+  clickEvents.submitPlayerName(gamePhase);
+  clickEvents.guessSpanRadios();
+  clickEvents.startGame(gamePhase);
+
+  // Initiate keyevents
+  keyEvents.submitYourGuess(computer, gamePhase, yourTurn);
 
   updatePhase(gamePhase);
+
+  setInputFilter(document.getElementById("intLimitTextBox"), function(
+    value: string
+  ) {
+    return /^\d*$/.test(value) && (value === "" || parseInt(value) <= guessSpan);
+  });
 }
 
 function updatePhase(gamePhase: number): void {
@@ -31,36 +45,61 @@ function updatePhase(gamePhase: number): void {
     phase_1.style.display = "none";
     phase_2.style.display = "none";
     phase_3.style.display = "none";
+
+    // input name
   } else if (gamePhase == 1) {
     phase_0.style.display = "none";
     phase_1.style.display = "block";
     phase_2.style.display = "none";
     phase_3.style.display = "none";
 
+    // main manu
+    // choose bot
+    // guessspan ??
+    // play
   } else if (gamePhase == 2) {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "block";
     phase_3.style.display = "none";
+
+    // game phase
+    // guess if it's your turn
+    // correct awnser = win
+    // incorrect answer 
   } else if (gamePhase == 3) {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "none";
     phase_3.style.display = "block";
+
+    // show highscore
+    // play again
   }
-
-  const guessSpan: number = 20; //make the user choose this with a range or dropdown
-
-  // let instructions = new Instructions()
-  let numberGenerator = new NumberGenerator();
-  let rng = numberGenerator.random(guessSpan);
-  console.log(rng);
-
-
-  let checkPlayerGuess = new NumberCheck();
-  
-  let easyBot = new Easy(lastGuess, numberInput, currentBotGuess);
-  console.log(easyBot.currentBotGuess)
-
+}
+function setInputFilter(textbox: any, inputFilter: any) {
+  [
+    "input",
+    "keydown",
+    "keyup",
+    "mousedown",
+    "mouseup",
+    "select",
+    "contextmenu",
+    "drop"
+  ].forEach(function(event) {
+    textbox.addEventListener(event, function() {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      } else {
+        this.value = "";
+      }
+    });
+  });
 }
 
