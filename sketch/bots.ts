@@ -1,39 +1,31 @@
-let lastGuess: number;
-let currentBotGuess: number;
-
 class Bots {
   public lastGuess: number;
-  public numberInput: number;
-  public currentBotGuess: number;
+  public guessList: Array<number>;
+  public info: string;
 
   constructor(
     lastGuess: number,
-    numberInput: number,
-    currentBotGuess: number = Math.ceil(Math.random() * 100)
+    guessList: Array<number>,
+    info: string,
   ) {
+    
     this.lastGuess = lastGuess;
-    this.numberInput = numberInput;
-    this.currentBotGuess = currentBotGuess;
+    this.guessList = guessList;
+    this.info = info;
   }
 }
 
 class Easy extends Bots {
   public botBehaviourEasy() {
   
-    if (message.textContent == "TOO HIGH!") {
-      this.botGuess()
-    }
-    
-    else if (message.textContent == "TOO LOW!") {
-      this.botGuess()
-    }
-
 
   }
   
   
   public botGuess(): number {
-    return this.currentBotGuess;
+
   }
 }
 
+/* number = Math.ceil(Math.random() * 100)
+ */
