@@ -193,3 +193,52 @@ button:hover{
   padding: 0.2rem;
   font-size: 1rem;
 }
+
+.phase-2 .game-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.phase-2 .player-input {
+  width: 4rem;
+  height: 2.5rem;
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color:  #085151;
+}
+
+.phase-2 button {
+  font-size: 1.2rem;
+}
+
+.messageFromGameManager {
+  margin: 1rem;
+}
+
+.botContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.botIcon {
+  height: 5rem;
+  width: 5rem;
+}
+
+.messageFromGameManager {
+  padding: 1rem;
+}
+
+.botGuess {
+  padding: 1rem;
+}
