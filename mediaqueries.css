@@ -1,0 +1,58 @@
+@media screen and (max-width: 55rem) {
+    .botbuttons {
+        display: flex;
+        width: 40rem;
+    }
+
+    .easyImg, .mediumImg, .hardImg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (max-width: 41.25rem) {
+    .botbuttons {
+        display: flex;
+        width: 35rem;
+    }
+}
+
+
+@media screen and (max-width: 36rem) {
+    .gameLogo {
+        height: auto;
+        max-width: 20rem;
+    }
+
+    .botbuttons {
+        display: flex;
+        width: 27rem;
+    }
+
+    .adjust-span > * {
+        font-size: 2.7rem;
+      }
+}
+
+@media screen and (max-width: 27.625rem) {
+    .botbuttons {
+        display: flex;
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 22rem) {
+    .gameLogo {
+        height: auto;
+        max-width: 15rem;
+    }
+    
+    .botbuttons {
+        display: flex;
+        width: 16rem;
+    }
+
+    .adjust-span > * {
+        font-size: 1rem;
+      }
+}

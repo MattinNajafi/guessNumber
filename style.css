@@ -38,57 +38,23 @@ header {
   margin-top: 0.5rem;
 }
 
-header h1 {
-  color: rgb(255, 255, 255);
-  font-family: "Montserrat", sans-serif;
-  font-size: 4rem;
-  padding: 0;
-  margin: 0;
-  text-shadow: 0.1rem 0.1rem 0.5rem black;
-}
-
-.inputPlayerName {
-  height: auto;
+.enterNameTitle {
   width: 15rem;
-  border: 0.2rem solid rgb(190, 190, 190);
-  border-radius: 0.6rem;
-  outline: none;
-  padding: 0.5rem;
-  box-sizing: border-box;
-}
-
-.inputPlayerName:focus {
-  border-color: rgb(255, 145, 0);
+  font-size: medium;
+  display: flex;
+  justify-content: center;
 }
 
 .inputNameField{
-  width: 22%;
+  width: 15rem;
   padding: 0.5rem;
   border: none;
 }
 
-.submitPlayerName {
-  background-color: white;
-  color: rgb(185, 0, 0);
-  padding: 0.5rem 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: x-large;
-  border-radius: 0.6rem;
-}
-
-.submitPlayerName:hover {
-  background-color: rgb(255, 145, 0);
-}
-
-.phase {
-  width: 60%;
-}
 .phase-0 {
   display: block;
 }
+
 .phase-0 div {
   display: flex;
   flex-direction: column;
@@ -101,7 +67,6 @@ header h1 {
 }
 
 .phase-1 div {
-  height: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -118,6 +83,7 @@ button{
 
 button:hover{
   background: #0a6868;
+  cursor: pointer;
 }
 
 .phase-1 .startGameButton {
@@ -126,10 +92,23 @@ button:hover{
   border: none;
 }
 
+.botButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .botButtons button {
-  font-size: 70;
+  display: flex;
   background: none;
   border: none;
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.easyImg, .mediumImg, .hardImg {
+  display: flex;
 }
 
 .phase-2 {
@@ -142,11 +121,10 @@ button:hover{
 .adjust-span {
   display: flex;
 }
+
 .adjust-span > * {
   font-size: 4rem;
-
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
