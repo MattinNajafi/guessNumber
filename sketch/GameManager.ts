@@ -20,6 +20,7 @@ function init(): void {
   clickEvents.toggleInstructions();
   clickEvents.submitPlayerName(gamePhase);
   clickEvents.guessSpanRadios();
+  clickEvents.startGame(gamePhase);
 
   // Initiate keyevents
   keyEvents.submitYourGuess(computer, gamePhase, yourTurn);
@@ -101,3 +102,4 @@ function setInputFilter(textbox: any, inputFilter: any) {
     });
   });
 }
+
