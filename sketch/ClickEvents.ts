@@ -47,6 +47,7 @@ class ClickEvents {
     let testButton: any = document.querySelector(".TEST");
     testButton.addEventListener("click", function() {
       console.log(logtext);
+      
     });
   }
   public submitPlayerName(gamePhase: number) {
@@ -57,8 +58,9 @@ class ClickEvents {
     submitNameButton.addEventListener("click", function(gamePhase: number) {
       // if submit button is pressed and the game is in the first phase go to next phase
       if (!(inputNameField.value == "")) {
-        saveToLocalStorage()
-        getFromLocalStorage()
+        savePlayer()
+        hiScoreList()
+        
 
         gamePhase = 1;
         updatePhase(gamePhase);
@@ -69,8 +71,17 @@ class ClickEvents {
       //else display a red border around the input field
     });
   }
+  public submitGuess(computer: any) {
+    let guessButton: any = document.querySelector(".guessButton");
+    let playerGuessInput: any = document.querySelector(".player-input");
+    let playerGuess: number;
 
-  public chooseBot(gamePhase:number){
+    guessButton.addEventListener("click", function() {
+      playerGuess = playerGuessInput.value;
+      computer.checkNumber(playerGuess);
+    });
+  }
+  public startGame(gamePhase:number){
     let startGameButton: any = document.querySelector(".startGameButton")
     gamePhase = gamePhase
 

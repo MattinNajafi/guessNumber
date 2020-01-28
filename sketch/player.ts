@@ -1,13 +1,22 @@
-function saveToLocalStorage(){
-    let playerName: any = document.querySelector(".inputNameField")
-    let playerNameValue: string = playerName.value
-    localStorage.setItem("name", JSON.stringify(playerNameValue))
+function savePlayer() {
+    let savePlayerName: any = document.querySelector(".inputNameField")
+    let playerNameValue: string = savePlayerName.value
+    let score: number = 5
+    localStorage.setItem("hiscore", JSON.stringify([playerNameValue, score]))  
+}
+function hiScoreList() {
+    let nameAndScore = JSON.parse(localStorage.getItem("hiscore") as string)
+    console.log(nameAndScore) 
 }
 
-function getFromLocalStorage() {
-    let playerName = JSON.parse(localStorage.getItem("name") as string)
-    console.log(playerName)
-}
+
+
+    // document.querySelector(".playername1").innerHTML = '1.  ' + playerName + '  500'
+    // document.querySelector(".playername2").innerHTML = '2.  ' + playerName + '  400' 
+    // document.querySelector(".playername3").innerHTML = '3.  ' + playerName + '  300' 
+    // document.querySelector(".playername4").innerHTML = '4.  ' + playerName + '  200' 
+    // document.querySelector(".playername5").innerHTML = '5.  ' + playerName + '  100' 
+
 
 // class ScoreTable {
 
