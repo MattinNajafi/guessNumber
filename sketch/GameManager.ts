@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 1;
+  let gamePhase: number = 0;
   const clickEvents = new ClickEvents();
 
   //Initiate clickevents
