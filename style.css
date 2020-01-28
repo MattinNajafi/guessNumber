@@ -30,6 +30,7 @@ h3{
   color: #fff;
   font-family: 'Raleway', sans-serif;
 }
+
 header {
   display: flex;
   justify-content: center;
@@ -179,10 +180,16 @@ button:hover{
 
 .instructions .content {
   display: none;
-
+  position: absolute;
+  width: 24rem;
+  height: 14rem;
+  top: 50%;
+  margin-top: -7rem;
+  left: 50%;
+  margin-left: -12rem; 
   padding: 1rem;
-  font-size: 1.2rem;
-  background: #eee5;
+  font-size: 1.5rem;
+  background: #aad1d2e2;
 }
 
 .instructions .toggle-btn {
@@ -192,4 +199,38 @@ button:hover{
   margin: 0.2rem;
   padding: 0.2rem;
   font-size: 1rem;
+}
+
+.phase-2 .game-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.phase-2 .player-input {
+  width: 4rem;
+  height: 2.5rem;
+  margin: 1.5 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color:  #085151;
+}
+
+.phase-2 .guessButton {
+  font-size: 1.5rem;
+} 
+
+.messageFromGameManager, botGuess {
+  padding: 1rem;
+}
+
+.botIcon {
+  height: 5rem;
+  width: 5rem;
 }
