@@ -71,8 +71,17 @@ class ClickEvents {
       //else display a red border around the input field
     });
   }
+  public submitGuess(computer: any) {
+    let guessButton: any = document.querySelector(".guessButton");
+    let playerGuessInput: any = document.querySelector(".player-input");
+    let playerGuess: number;
 
-  public chooseBot(gamePhase:number){
+    guessButton.addEventListener("click", function() {
+      playerGuess = playerGuessInput.value;
+      computer.checkNumber(playerGuess);
+    });
+  }
+  public startGame(gamePhase:number){
     let startGameButton: any = document.querySelector(".startGameButton")
     gamePhase = gamePhase
 
