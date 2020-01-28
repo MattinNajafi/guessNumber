@@ -196,12 +196,14 @@ button:hover{
 
 .phase-2 .game-area {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #ffffff;
   font-size: 1.5rem;
   margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 .phase-2 .player-input {
@@ -215,30 +217,13 @@ button:hover{
 
 .phase-2 button {
   font-size: 1.2rem;
-}
+} 
 
-.messageFromGameManager {
-  margin: 1rem;
-}
-
-.botContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  font-size: 1.5rem;
+.messageFromGameManager, botGuess {
+  padding: 1rem;
 }
 
 .botIcon {
   height: 5rem;
   width: 5rem;
-}
-
-.messageFromGameManager {
-  padding: 1rem;
-}
-
-.botGuess {
-  padding: 1rem;
 }
