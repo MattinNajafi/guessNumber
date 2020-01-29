@@ -157,28 +157,6 @@ button:hover{
 
 /*Bot buttons style*/
 
-/* .botButtons input[type="radio"] {
-}
-
-.botButtons label {
-  padding: 1rem;
-  margin: 0.5rem;
-  color: var(--secondary); 
-  background: var(--triary);
-  transition: 0.2s ease;
-}
-
-.botButtons label .bot{
-  color: var(--triary);
-  border: 0.2rem solid var(--secondary);
-  background: black;
-} */
-
-/* .botButtons {
-  display: flex;
-  flex-direction: row;
-}
-
 .easyBotText {
   display: none;
 }
@@ -189,7 +167,7 @@ button:hover{
 
 .hardBotText {
   display: none;
-} */
+}
 
 /*Bot buttons style END*/
 
