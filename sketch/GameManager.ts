@@ -19,7 +19,7 @@ function init(): void {
   clickEvents.testButton(computer.info);
   clickEvents.toggleInstructions();
   clickEvents.submitPlayerName(gamePhase);
-  clickEvents.guessSpanRadios();
+  // clickEvents.guessSpanRadios();
   clickEvents.startGame(gamePhase);
 
   // Initiate keyevents
