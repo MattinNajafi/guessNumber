@@ -31,6 +31,10 @@ h3{
   font-family: 'Raleway', sans-serif;
 }
 
+h2{
+  font-family: 'Raleway', sans-serif;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -172,9 +176,25 @@ button:hover{
 .hardBotText {
   display: none;
 }
+label[for=player]
+{
+margin:0.5rem;
+}
+.side{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
 
+.player-side, .bot-side{
+  margin: 0.5rem;
+}
 /*Bot buttons style END*/
 
+.playerImg, .botImgs{
+  display: none;
+}
 .instructions .content {
   display: none;
   position: absolute;
@@ -226,6 +246,10 @@ button:hover{
 
 .messageFromGameManager, botGuess {
   padding: 1rem;
+}
+
+.player-guess, .bot-guess{
+  font-size: 1.3rem;
 }
 
 .botIcon {
