@@ -20,7 +20,7 @@ function init(): void {
   clickEvents.toggleInstructions();
   clickEvents.displayBotPresentation();
   clickEvents.submitPlayerName(gamePhase);
-  /* clickEvents.guessSpanRadios(); */
+  // clickEvents.guessSpanRadios();
   clickEvents.startGame(gamePhase);
 
   // Initiate keyevents
