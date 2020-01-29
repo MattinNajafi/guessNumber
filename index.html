@@ -6,6 +6,7 @@
     <title>guessNumber</title>
     <script defer src="./build/bundle.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css">
     
 <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
@@ -14,13 +15,13 @@
 
   <body>
     <header>
-      <img src="assets/images/logo.png" alt="">
+      <img src="assets/images/logo.png" class="gameLogo" alt="Higher or lower logo">
     </header>
     
 
     <div class="phase phase-0">
       <div>
-        <h3>Please enter your name:</h3>
+        <h3 class="enterNameTitle">Please enter your name:</h3>
         <input type="text" placeholder="name:" class="inputNameField" />
         <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
       </div>
