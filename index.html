@@ -7,6 +7,7 @@
   <title>guessNumber</title>
   <script defer src="./build/bundle.js"></script>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css">
 
   <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
@@ -15,12 +16,13 @@
 
 <body>
   <header>
-    <img src="assets/images/logo.png" alt="">
+    <img src="assets/images/logo.png" class="gameLogo" alt="Higher or lower logo">
   </header>
+
 
   <div class="phase phase-0">
     <div>
-      <h3>Please enter your name:</h3>
+      <h3 class="enterNameTitle">Please enter your name:</h3>
       <input type="text" placeholder="name:" class="inputNameField" />
       <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
     </div>
@@ -30,33 +32,16 @@
   <!-- end of phase 0-->
 
   <div class="phase phase-1">
-    <div class="adjust-span">
-      <label for="span-radio-1" class="checked-label">20
-        <input type="radio" id="span-radio-1" name="span" value="20" checked />
-      </label>
-      <label for="span-radio-2">50
-        <input type="radio" id="span-radio-2" name="span" value="50" />
-      </label>
-      <label for="span-radio-3">100
-        <input type="radio" id="span-radio-3" name="span" value="100" />
-      </label>
+    <div class="botPresentation">
+      <img src="assets/images/bobot.png" alt="">
     </div>
-
     <div class="botButtons">
-      <label for="easy" class="bot"><img src="assets/images/roboto.png" alt="">
-        <input type="radio" name="bot" value="easy" id="easy" checked />
-      </label>
-      <label for="medium"><img src="assets/images/deep-learning.png" alt="">
-        <input type="radio" name="bot" id="medium" value="medium" />
-      </label>
-      <label for="hard"> <img src="assets/images/cs.png" alt="">
-        <input type="radio" name="bot" id="hard" value="hard" />
-      </label>
+      <button class="easy"><img src="assets/images/deep-learning.png" alt=""></button>
     </div>
-
     <div>
       <button class="startGameButton">START GAME</button>
     </div>
+  </div>
   </div>
   <!-- end of phase 1-->
 
@@ -92,9 +77,14 @@
     <div class="content">
       <h3>HOW TO PLAY THE GAME</h3>
       <br />
-      <p>If you don´t understand the rules! Don´t play. OK??</p>
-      <br />
-      <img src="assets/images/anime2.gif" alt="" />
+      <p>If you don´t understand the rules! You shouldn't play. But OK, here are the rules anyway:
+        <br />
+        You and Bobot will try to guess the secret number. You have as many turns as needed, but remeber, the first one
+        who guesses the correct number wins.
+        <br />
+        Just press <strong>START GAME</strong> to play!
+      </p>
+
     </div>
 
     <button class="toggle-btn">HELP <i class="fas fa-life-ring"></i></i></button>
