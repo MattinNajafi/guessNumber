@@ -1,106 +1,88 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>guessNumber</title>
-    <script defer src="./build/bundle.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    
-<link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>guessNumber</title>
+  <script defer src="./build/bundle.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css">
 
-  <body>
-    <header>
-      <img src="assets/images/logo.png" alt="">
-    </header>
-    
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
-    <div class="phase phase-0">
-      <div>
-        <h3>Please enter your name:</h3>
-        <input type="text" placeholder="name:" class="inputNameField" />
-        <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
-      </div>
+</head>
+
+<body>
+  <header>
+    <img src="assets/images/logo.png" class="gameLogo" alt="Higher or lower logo">
+  </header>
+
+
+  <div class="phase phase-0">
+    <div>
+      <h3 class="enterNameTitle">Please enter your name:</h3>
+      <input type="text" placeholder="name:" class="inputNameField" />
+      <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
     </div>
+  </div>
   </div>
 
   <!-- end of phase 0-->
 
-    <div class="phase phase-1">
-      <div class="adjust-span">
-        <label for="span-radio-1" class="checked-label"
-          >20
-          <input
-            type="radio"
-            id="span-radio-1"
-            name="span"
-            value="20"
-            checked
-          />
-        </label>
-        <label for="span-radio-2"
-          >50
-          <input type="radio" id="span-radio-2" name="span" value="50" />
-        </label>
-        <label for="span-radio-3"
-          >100
-          <input type="radio" id="span-radio-3" name="span" value="100" />
-        </label>
-      </div>
-      <div class="botButtons">
-        <button class="easy"><img src="assets/images/roboto.png" alt=""></button>
-        <button class="medium"><img src="assets/images/deep-learning.png" alt=""></button>
-        <button class="hard"><img src="assets/images/cs.png" alt=""> </button>
-      </div>
-      <div>
-        <button class="startGameButton">START GAME</button>
-      </div>
+  <div class="phase phase-1">
+    <div class="botPresentation">
+      <img src="assets/images/bobot.png" alt="">
     </div>
-    <!-- end of phase 1-->
-
+    <div class="botButtons">
+      <button class="easy"><img src="assets/images/deep-learning.png" alt=""></button>
+    </div>
+    <div>
+      <button class="startGameButton">START GAME</button>
+    </div>
+  </div>
   </div>
   <!-- end of phase 1-->
+
 
   <div class="phase phase-2">
     <div class="game-area">
       <label for="player">Input your guess:</label>
       <div><input type="text" name="player" id="intLimitTextBox" class="player-input">
-      <button class="guessButton">OK</button></div>
+        <button class="guessButton">OK</button></div>
       <h3 class="messageFromGameManager"></h3>
-      <div class="botIcon"></div>
+      <img class="botIcon" src="assets/images/deep-learning.png" alt="">
       <h3>The bot guess:</h3>
       <h3 class="botGuess"></h3>
     </div>
-    
+
   </div>
   <!-- end of phase 2-->
 
 
-    
+  <div class="phase phase-3">
+  </div>
+  <!-- end of phase 3-->
 
-    <div class="phase phase-3">
-      <h2>phase_3</h2>
-      <div class="playername">
-        <h3>High Score List</h3>
-      </div>
-    </div>
-    <!-- end of phase 3-->
-
-    <div class="instructions">
-      <div class="content">
-        <h3>HOW TO PLAY THE GAME</h3>
+  <div class="instructions">
+    <div class="content">
+      <h3>HOW TO PLAY THE GAME</h3>
+      <br />
+      <p>If you don´t understand the rules! You shouldn't play. But OK, here are the rules anyway:
         <br />
-        <p>If you don´t understand the rules! Don´t play. OK??</p>
+        You and Bobot will try to guess the secret number. You have as many turns as needed, but remeber, the first one
+        who guesses the correct number wins.
         <br />
-        <img src="assets/images/anime2.gif" alt="" />
-      </div>
+        Just press <strong>START GAME</strong> to play!
+      </p>
 
-      <button class="toggle-btn">HELP <i class="fas fa-life-ring"></i></i></button>
     </div>
 
-    <button class="TEST">TEST</button>
-  </body>
+    <button class="toggle-btn">HELP <i class="fas fa-life-ring"></i></i></button>
+  </div>
+
+  <button class="TEST">TEST</button>
+</body>
+
 </html>
