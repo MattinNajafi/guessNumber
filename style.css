@@ -72,6 +72,10 @@ header {
   justify-content: space-around;
 }
 
+.botPresentation {
+  padding: 0rem 10rem 0rem 0rem;
+}
+
 button{
   background: #085151;
   padding: 0.7rem;
@@ -86,7 +90,7 @@ button:hover{
   cursor: pointer;
 }
 
-.phase-1 .startGameButton {
+.startGameButton {
   font-size: 40;
   background: none;
   border: none;
@@ -107,7 +111,7 @@ button:hover{
   padding: 0.3rem;
 }
 
-.easyImg, .mediumImg, .hardImg {
+.easyImg {
   display: flex;
 }
 
@@ -160,14 +164,15 @@ button:hover{
   display: none;
   position: absolute;
   width: 24rem;
-  height: 14rem;
+  height: 23rem;
   top: 50%;
-  margin-top: -7rem;
+  margin-top: -11.5rem;
   left: 50%;
   margin-left: -12rem; 
   padding: 1rem;
   font-size: 1.5rem;
   background: #aad1d2e2;
+  color: #0a6868;
 }
 
 .instructions .toggle-btn {
@@ -209,6 +214,6 @@ button:hover{
 }
 
 .botIcon {
-  height: 5rem;
-  width: 5rem;
+  height: 15rem;
+  width: 15rem;
 }
