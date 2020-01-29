@@ -21,7 +21,7 @@ class ClickEvents {
     );
     let spanLabels: any = document.querySelectorAll(".adjust-span label");
     let guessSpan: number = parseInt(
-      document.querySelector(".adjust-span .checked-label input").value
+      (document.querySelector(".adjust-span .checked-label input") as HTMLInputElement).value
     );
 
     for (let i = 0; i < spanRadios.length; i++) {
@@ -47,7 +47,6 @@ class ClickEvents {
     let testButton: any = document.querySelector(".TEST");
     testButton.addEventListener("click", function() {
       console.log(logtext);
-      
     });
   }
   public submitPlayerName(gamePhase: number) {
@@ -58,8 +57,8 @@ class ClickEvents {
     submitNameButton.addEventListener("click", function(gamePhase: number) {
       // if submit button is pressed and the game is in the first phase go to next phase
       if (!(inputNameField.value == "")) {
-        savePlayer()
-        hiScoreList()
+        savePlayerScore()
+        
         
 
         gamePhase = 1;
