@@ -1,100 +1,83 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>guessNumber</title>
-    <script defer src="./build/bundle.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    
-<link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>guessNumber</title>
+  <script defer src="./build/bundle.js"></script>
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <header>
-      <img src="assets/images/logo.png" alt="">
-    </header>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
-    <div class="phase phase-0">
-      <div>
-        <h3>Please enter your name:</h3>
-        <input type="text" placeholder="name:" class="inputNameField" />
-        <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
-      </div>
+</head>
+
+<body>
+  <header>
+    <img src="assets/images/logo.png" alt="">
+  </header>
+
+  <div class="phase phase-0">
+    <div>
+      <h3>Please enter your name:</h3>
+      <input type="text" placeholder="name:" class="inputNameField" />
+      <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
     </div>
+  </div>
   </div>
 
   <!-- end of phase 0-->
 
-    <div class="phase phase-1">
-      <div class="adjust-span">
-        <label for="span-radio-1" class="checked-label"
-          >20
-          <input
-            type="radio"
-            id="span-radio-1"
-            name="span"
-            value="20"
-            checked
-          />
-        </label>
-        <label for="span-radio-2"
-          >50
-          <input type="radio" id="span-radio-2" name="span" value="50" />
-        </label>
-        <label for="span-radio-3"
-          >100
-          <input type="radio" id="span-radio-3" name="span" value="100" />
-        </label>
-      </div>
-      
-      <div class="botButtons">
-      <label for="easy" class="bot"
-          ><img src="assets/images/roboto.png" alt="">
-          <input
-            type="radio"
-            name="bot"
-            value="easy"
-            id="easy"
-            checked
-          />
-        </label>
-        <label for="medium" 
-          ><img src="assets/images/deep-learning.png" alt="">
-          <input 
-          type="radio" 
-          name="bot" 
-          id="medium"
-          value="medium"/>
-        </label>
-        <label for="hard" 
-          > <img src="assets/images/cs.png" alt="">
-          <input 
-          type="radio" 
-          name="bot" 
-          id="hard"
-          value="hard" />
-        </label>
-        </div>
-
-      <div>
-        <button class="startGameButton">START GAME</button>
-      </div>
+  <div class="phase phase-1">
+    <div class="adjust-span">
+      <label for="span-radio-1" class="checked-label">20
+        <input type="radio" id="span-radio-1" name="span" value="20" checked />
+      </label>
+      <label for="span-radio-2">50
+        <input type="radio" id="span-radio-2" name="span" value="50" />
+      </label>
+      <label for="span-radio-3">100
+        <input type="radio" id="span-radio-3" name="span" value="100" />
+      </label>
     </div>
-    <!-- end of phase 1-->
 
+    <div class="botButtons">
+      <label for="easy" class="bot"><img src="assets/images/roboto.png" alt="">
+        <input type="radio" name="bot" value="easy" id="easy" checked />
+      </label>
+      <label for="medium"><img src="assets/images/deep-learning.png" alt="">
+        <input type="radio" name="bot" id="medium" value="medium" />
+      </label>
+      <label for="hard"> <img src="assets/images/cs.png" alt="">
+        <input type="radio" name="bot" id="hard" value="hard" />
+      </label>
+    </div>
+
+    <div>
+      <button class="startGameButton">START GAME</button>
+    </div>
   </div>
   <!-- end of phase 1-->
 
+
   <div class="phase phase-2">
-    <h2>phase_2</h2>
     <div class="game-area">
-      <label for="player">Input your guess:</label>
-      <input type="text" name="player" id="intLimitTextBox" class="player-input">
-      <button class="guessButton">guess</button>
-      <div class="message"></div>
+
+      <div class="side player-side">
+        <h2 class="player-message"></h2>
+        <h3 class="player-guess"></h3>
+        <label for="player">Input your guess:</label>
+        <input type="text" name="player" id="intLimitTextBox" class="player-input">
+      </div>
+
+      <div class="side bot-side">
+        <h2 class="bot-message"></h2>
+        <h3 class="bot-guess"></h3>
+        <p>H3ll0 :: 1 :: 4M :: 7h3 :: S700P1D ::B07</p>
+        <p>4ND :: 1 :: W1LL :: BR34K :: Y0U</p>
+      </div>
+
     </div>
   </div>
   <!-- end of phase 2-->
@@ -106,23 +89,24 @@
   <!-- end of phase 3-->
 
 
-    <div class="phase phase-3">
-      <h2>phase_3</h2>
-    </div>
-    <!-- end of phase 3-->
+  <div class="phase phase-3">
+    <h2>phase_3</h2>
+  </div>
+  <!-- end of phase 3-->
 
-    <div class="instructions">
-      <div class="content">
-        <h3>HOW TO PLAY THE GAME</h3>
-        <br />
-        <p>If you don´t understand the rules! Don´t play. OK??</p>
-        <br />
-        <img src="assets/images/anime2.gif" alt="" />
-      </div>
-
-      <button class="toggle-btn">HELP <i class="fas fa-life-ring"></i></i></button>
+  <div class="instructions">
+    <div class="content">
+      <h3>HOW TO PLAY THE GAME</h3>
+      <br />
+      <p>If you don´t understand the rules! Don´t play. OK??</p>
+      <br />
+      <img src="assets/images/anime2.gif" alt="" />
     </div>
 
-    <button class="TEST">TEST</button>
-  </body>
+    <button class="toggle-btn">HELP <i class="fas fa-life-ring"></i></i></button>
+  </div>
+
+  <button class="TEST">TEST</button>
+</body>
+
 </html>

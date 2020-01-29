@@ -1,4 +1,10 @@
 class ClickEvents {
+  // private guessSpanCallback: (span: number) => void;
+
+  // constructor(guessSpanCallback: (span: number) => void) {
+  //   this.guessSpanCallback = guessSpanCallback;
+  // }
+
   public toggleInstructions(): void {
     let toggleBtn: any = document.querySelector(".toggle-btn");
     let content: any = document.querySelector(".instructions .content");
@@ -15,42 +21,38 @@ class ClickEvents {
     });
   }
 
-  public guessSpanRadios(): number {
-    let spanRadios: any = document.querySelectorAll(
-      ".adjust-span input[type='radio']"
-    );
-    let spanLabels: any = document.querySelectorAll(".adjust-span label");
-    let guessSpan: number = parseInt(
-      document.querySelector(".adjust-span .checked-label input").value
-    );
+  // public guessSpanRadios(): void {
+  //   let spanRadios = document.querySelectorAll(
+  //     ".adjust-span input[type='radio']"
+  //   ) as NodeListOf<HTMLInputElement>;
+  //   let spanLabels: any = document.querySelectorAll(".adjust-span label");
 
-    for (let i = 0; i < spanRadios.length; i++) {
-      spanRadios[i].addEventListener("input", function(
-        guessSpan: string | number
-      ) {
-        for (let j = 0; j < spanRadios.length; j++) {
-          if (!spanRadios[j].checked) {
-            spanLabels[j].classList.remove("checked-label");
-          }
-        }
-        if (spanRadios[i].checked) {
-          spanLabels[i].classList.add("checked-label");
-          guessSpan = parseInt(spanRadios[i].value);
-        }
-      });
-    }
-    console.log("4 : " + guessSpan);
-    return guessSpan;
-  }
+  //   for (let i = 0; i < spanRadios.length; i++) {
+  //     spanRadios[i].addEventListener("change", () => {
+  //       for (let j = 0; j < spanRadios.length; j++) {
+  //         if (!spanRadios[j].checked) {
+  //           spanLabels[j].classList.remove("checked-label");
+  //         }
+  //       }
+  //       if (spanRadios[i].checked) {
+  //         spanLabels[i].classList.add("checked-label");
+          
+  //         let guessSpan = parseInt(spanRadios[i].value);
+  //         console.log('arrived . guessspan is ' + guessSpan);
+  //         this.guessSpanCallback(guessSpan);
+  //       }
+  //     });
+  //   }
+  // }
 
-  botButtonsRadios(): any {
+  public botButtonsRadios(): any {
     let botRadios: any = document.querySelectorAll(
       ".botButtons input[type='radio']"
     );
     let botLabels: any = document.querySelectorAll(".botButtons label");
 
     for (let i = 0; i < botRadios.length; i++) {
-      botRadios[i].addEventListener("input") 
+      botRadios[i].addEventListener("input");
       {
         for (let j = 0; j < botRadios.length; j++) {
           if (!botRadios[j].checked) {
@@ -60,17 +62,10 @@ class ClickEvents {
         if (botRadios[i].checked) {
           botLabels[i].classList.add(".bot");
         }
-      };
+      }
     }
-
   }
 
-  public testButton(logtext: number | string) {
-    let testButton: any = document.querySelector(".TEST");
-    testButton.addEventListener("click", function() {
-      console.log(logtext);
-    });
-  }
   public submitPlayerName(gamePhase: number) {
     let submitNameButton: any = document.querySelector(".submitNameButton");
     let inputNameField: any = document.querySelector(".inputNameField");
@@ -90,6 +85,7 @@ class ClickEvents {
       //else display a red border around the input field
     });
   }
+
   public submitGuess(computer: any) {
     let guessButton: any = document.querySelector(".guessButton");
     let playerGuessInput: any = document.querySelector(".player-input");
@@ -100,17 +96,24 @@ class ClickEvents {
       computer.checkNumber(playerGuess);
     });
   }
-  public startGame(gamePhase:number){
-    let startGameButton: any = document.querySelector(".startGameButton")
-    gamePhase = gamePhase
+  
+  public startGame(gamePhase: number) {
+    let startGameButton: any = document.querySelector(".startGameButton");
+    gamePhase = gamePhase;
 
-    startGameButton.addEventListener("click",function(gamePhase: number){
+    startGameButton.addEventListener("click", function(gamePhase: number) {
       gamePhase = 2;
       updatePhase(gamePhase);
-    
-    })
+    });
   }
 
+  // TEST BUTTON
+  public testButton(logtext: any) {
+    let testButton: any = document.querySelector(".TEST");
+    testButton.addEventListener("click", function() {
+      // test whatever here
 
-
+      console.log(logtext);
+    });
+  }
 }

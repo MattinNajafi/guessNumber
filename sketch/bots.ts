@@ -1,39 +1,67 @@
-let lastGuess: number;
-let currentBotGuess: number;
+class Bot {
+  public CPUinfo: string;
+  public botGuess: number;
 
-class Bots {
-  public lastGuess: number;
-  public numberInput: number;
-  public currentBotGuess: number;
+  private under: number | any;
+  private over: number | any;
+  private computer: any;
+  private yourTurn: boolean;
 
-  constructor(
-    lastGuess: number,
-    numberInput: number,
-    currentBotGuess: number = Math.ceil(Math.random() * 100)
-  ) {
-    this.lastGuess = lastGuess;
-    this.numberInput = numberInput;
-    this.currentBotGuess = currentBotGuess;
+  constructor(computer: CPU, yourTurn: boolean) {
+    this.computer = computer;
+    this.yourTurn = yourTurn;
+
+    this.CPUinfo = computer.info;
+    this.botGuess = 0;
   }
-}
 
-class Easy extends Bots {
-  public botBehaviourEasy() {
-  
-    if (message.textContent == "TOO HIGH!") {
-      this.botGuess()
+  //
+  public easy() {
+    this.botGuess = Math.random() * 20;
+    console.log("easy Bot guessing : " + this.botGuess);
+    this.computer.checkNumber(Math.floor(this.botGuess), 2, this.yourTurn);
+  }
+  public medium(computer: any) {
+    if (computer.higherList.length > 0) {
+      this.under = computer.higherList.sort()[0];
+    } else {
+      this.under = 20;
     }
+    if (computer.lowerList.length > 0) {
+      this.over = computer.lowerList.sort()[computer.lowerList.length - 1];
+    } else {
+      this.over = 0;
+    }
+
+    this.botGuess = this.over + Math.random() * (this.under - this.over);
+    console.log("medium Bot guessing : " + this.botGuess);
+
+    this.computer.checkNumber(Math.floor(this.botGuess), 2, this.yourTurn);
+  }
+  public hard(computer: any) {
     
-    else if (message.textContent == "TOO LOW!") {
-      this.botGuess()
+
+    if (computer.higherList.length > 0) {
+      this.under = computer.higherList.sort(this.sortNumber)[0];
+    } else {
+      this.under = 20;
     }
+    if (computer.lowerList.length > 0) {
+      this.over = computer.lowerList.sort(this.sortNumber)[computer.lowerList.length - 1];
+    } else {
+      this.over = 0;
+    }
+    console.log("over :" + this.under);
+    console.log("under :" + this.over);
 
+    this.botGuess = this.over + (this.under - this.over) / 2;
 
+    console.log("hard Bot guessing : " + this.botGuess);
+
+    this.computer.checkNumber(Math.floor(this.botGuess), 2, this.yourTurn);
   }
-  
-  
-  public botGuess(): number {
-    return this.currentBotGuess;
+
+  public sortNumber(a: any, b: any): number {
+    return a - b;
   }
 }
-
