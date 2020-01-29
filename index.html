@@ -1,29 +1,30 @@
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>guessNumber</title>
+    <script defer src="./build/bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css">
+    
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>guessNumber</title>
-  <script defer src="./build/bundle.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
+  <body>
+    <header>
+      <img src="assets/images/logo.png" class="gameLogo" alt="Higher or lower logo">
+    </header>
+    
 
-</head>
-
-<body>
-  <header>
-    <img src="assets/images/logo.png" alt="">
-  </header>
-
-
-  <div class="phase phase-0">
-    <div>
-      <h3>Please enter your name:</h3>
-      <input type="text" placeholder="name:" class="inputNameField" />
-      <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
+    <div class="phase phase-0">
+      <div>
+        <h3 class="enterNameTitle">Please enter your name:</h3>
+        <input type="text" placeholder="name:" class="inputNameField" />
+        <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
+      </div>
     </div>
   </div>
   </div>
@@ -52,6 +53,11 @@
         </label>
       </div> -->
 
+     <!--  <div class="botButtons">
+        <button class="easy"><img class="easyImg" src="assets/images/roboto.png" alt=""></button>
+        <button class="medium"><img class="mediumImg" src="assets/images/deep-learning.png" alt=""></button>
+        <button class="hard"><img class="hardImg" src="assets/images/cs.png" alt=""> </button>
+      </div> -->
       
       <div class="botText">
       <div class="easyBotText">
@@ -59,20 +65,19 @@
       </div>
       <div class="mediumBotText">
         <h2>Hi I'm Medium</h2>
-      </div>
       <div class="hardBotText">
         <h2>Hi I'm Hard</h2>
       </div>
     </div>
       
       <div class="botButtons">
-      <button class="easyBot"><img src="assets/images/roboto.png" alt="">
+      <button class="easyBot"><img class="easyImg" src="assets/images/roboto.png" alt="">
       </button>
 
-      <button class="mediumBot"><img src="assets/images/deep-learning.png" alt="">
+      <button class="mediumBot"><img class="mediumImg" src="assets/images/deep-learning.png" alt="">
       </button>
 
-      <button class="hardBot"> <img src="assets/images/cs.png" alt="">
+      <button class="hardBot"> <img class="hardImg" src="assets/images/cs.png" alt="">
       </button>
 
     </div>
