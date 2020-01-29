@@ -22,12 +22,20 @@ class CPU {
     let playerGuess: any = document.querySelector(".player-guess");
     let score: number;
     let guessList: Array<number> = [];
-    
 
     if (turn) {
       botGuess.textContent = "I guess :" + guess;
-      if (guess == this.correctAnswer) {
+      if (
+        guess == this.correctAnswer &&
+        !(
+          (document.querySelector(".conclusion") as HTMLHeadingElement)
+            .innerText === "You win!"
+        )
+      ) {
         console.log("Bot wins!");
+        (document.querySelector(
+          ".conclusion"
+        ) as HTMLHeadingElement).innerText = "Bot Wins! you suck!! HAhahahahaa";
         gamePhase = 3;
         updatePhase(gamePhase);
       } else if (guess < this.correctAnswer) {
@@ -43,11 +51,15 @@ class CPU {
       playerGuess.textContent = "I guess :" + guess;
       console.log("guessList " + guessList);
       if (guess == this.correctAnswer) {
-        score = guessList.length
+        (document.querySelector(
+          ".conclusion"
+        ) as HTMLHeadingElement).innerText = "You win!";
+
+        score = guessList.length;
         gamePhase = 3;
         console.log("You win!");
         console.log("score :" + score);
-        
+
         updatePhase(gamePhase);
       } else if (guess < this.correctAnswer) {
         playerMessage.textContent = "TOO LOW!";
