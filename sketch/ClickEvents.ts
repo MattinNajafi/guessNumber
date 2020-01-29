@@ -21,14 +21,19 @@ class ClickEvents {
     });
   }
 
-  // public guessSpanRadios(): void {
-  //   let spanRadios = document.querySelectorAll(
+  // public guessSpanRadios(): number {
+  //   let spanRadios: any = document.querySelectorAll(
   //     ".adjust-span input[type='radio']"
-  //   ) as NodeListOf<HTMLInputElement>;
+  //   );
   //   let spanLabels: any = document.querySelectorAll(".adjust-span label");
+  //   let guessSpan: number = parseInt(
+  //     document.querySelector(".adjust-span .checked-label input").value
+  //   );
 
   //   for (let i = 0; i < spanRadios.length; i++) {
-  //     spanRadios[i].addEventListener("change", () => {
+  //     spanRadios[i].addEventListener("input", function(
+  //       guessSpan: string | number
+  //     ) {
   //       for (let j = 0; j < spanRadios.length; j++) {
   //         if (!spanRadios[j].checked) {
   //           spanLabels[j].classList.remove("checked-label");
@@ -36,34 +41,52 @@ class ClickEvents {
   //       }
   //       if (spanRadios[i].checked) {
   //         spanLabels[i].classList.add("checked-label");
-          
-  //         let guessSpan = parseInt(spanRadios[i].value);
-  //         console.log('arrived . guessspan is ' + guessSpan);
-  //         this.guessSpanCallback(guessSpan);
+  //         guessSpan = parseInt(spanRadios[i].value);
   //       }
   //     });
   //   }
+  //   console.log("4 : " + guessSpan);
+  //   return guessSpan;
   // }
 
-  public botButtonsRadios(): any {
-    let botRadios: any = document.querySelectorAll(
-      ".botButtons input[type='radio']"
-    );
-    let botLabels: any = document.querySelectorAll(".botButtons label");
+  public displayBotPresentation(): void {
+    let easyBot: any = document.querySelector(".easyBot");
+    let easyBotText: any = document.querySelector(".easyBotText");
+    /* let mediumBot: any = document.querySelector(".mediumBot");
+    let mediumBotText: any = document.querySelector(".mediumBotText");
+    let hardBot: any = document.querySelector(".hardBot");
+    let hardBotText: any = document.querySelector(".hardBotText"); */
+    let open: Boolean = false;
 
-    for (let i = 0; i < botRadios.length; i++) {
-      botRadios[i].addEventListener("input");
-      {
-        for (let j = 0; j < botRadios.length; j++) {
-          if (!botRadios[j].checked) {
-            botLabels[j].classList.remove(".bot");
-          }
-        }
-        if (botRadios[i].checked) {
-          botLabels[i].classList.add(".bot");
-        }
+    easyBot.addEventListener("click", function() {
+      if (!open) {
+        easyBotText.style.display = "block";
+        open = true;
+      } else if (open) {
+        easyBotText.style.display = "none";
+        open = false;
       }
-    }
+    });
+
+    /*   mediumBot.addEventListener("click", function() {
+      if (!open) {
+        mediumBotText.style.display = "none";
+        open = true;
+      } else if (open) {
+        mediumBotText.style.display = "block";
+        open = false;
+      }
+    });
+
+    hardBot.addEventListener("click", function() {
+      if (!open) {
+        hardBotText.style.display = "none";
+        open = true;
+      } else if (open) {
+        hardBotText.style.display = "block";
+        open = false;
+      }
+    }); */
   }
 
   public submitPlayerName(gamePhase: number) {
@@ -96,7 +119,7 @@ class ClickEvents {
       computer.checkNumber(playerGuess);
     });
   }
-  
+
   public startGame(gamePhase: number) {
     let startGameButton: any = document.querySelector(".startGameButton");
     gamePhase = gamePhase;

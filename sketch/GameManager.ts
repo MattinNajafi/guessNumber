@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 2;
+  let gamePhase: number = 1;
   let guessSpan: number = 20; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
 
@@ -23,7 +23,9 @@ function init(): void {
   // clickEvents.guessSpanRadios();
 
   clickEvents.toggleInstructions();
+  clickEvents.displayBotPresentation();
   clickEvents.submitPlayerName(gamePhase);
+  // clickEvents.guessSpanRadios();
   clickEvents.startGame(gamePhase);
 
   // Initiate keyevents

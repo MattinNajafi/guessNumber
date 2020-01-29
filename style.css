@@ -30,6 +30,7 @@ h3{
   color: #fff;
   font-family: 'Raleway', sans-serif;
 }
+
 header {
   display: flex;
   justify-content: center;
@@ -37,57 +38,23 @@ header {
   margin-top: 0.5rem;
 }
 
-header h1 {
-  color: rgb(255, 255, 255);
-  font-family: "Montserrat", sans-serif;
-  font-size: 4rem;
-  padding: 0;
-  margin: 0;
-  text-shadow: 0.1rem 0.1rem 0.5rem black;
-}
-
-.inputPlayerName {
-  height: auto;
+.enterNameTitle {
   width: 15rem;
-  border: 0.2rem solid rgb(190, 190, 190);
-  border-radius: 0.6rem;
-  outline: none;
-  padding: 0.5rem;
-  box-sizing: border-box;
-}
-
-.inputPlayerName:focus {
-  border-color: rgb(255, 145, 0);
+  font-size: medium;
+  display: flex;
+  justify-content: center;
 }
 
 .inputNameField{
-  width: 22%;
+  width: 15rem;
   padding: 0.5rem;
   border: none;
 }
 
-.submitPlayerName {
-  background-color: white;
-  color: rgb(185, 0, 0);
-  padding: 0.5rem 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: x-large;
-  border-radius: 0.6rem;
-}
-
-.submitPlayerName:hover {
-  background-color: rgb(255, 145, 0);
-}
-
-.phase {
-  width: 60%;
-}
 .phase-0 {
   display: block;
 }
+
 .phase-0 div {
   display: flex;
   flex-direction: column;
@@ -100,7 +67,6 @@ header h1 {
 }
 
 .phase-1 div {
-  height: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -117,12 +83,32 @@ button{
 
 button:hover{
   background: #0a6868;
+  cursor: pointer;
 }
 
 .phase-1 .startGameButton {
   font-size: 40;
   background: none;
   border: none;
+}
+
+.botButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.botButtons button {
+  display: flex;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.easyImg, .mediumImg, .hardImg {
+  display: flex;
 }
 
 .phase-2 {
@@ -135,11 +121,10 @@ button:hover{
 .adjust-span {
   display: flex;
 }
+
 .adjust-span > * {
   font-size: 4rem;
-
   cursor: pointer;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,35 +157,32 @@ button:hover{
 
 /*Bot buttons style*/
 
-.botButtons input[type="radio"] {
+.easyBotText {
   display: none;
 }
 
-.botButtons label {
-  padding: 1rem;
-  margin: 0.5rem;
-
-  color: var(--secondary);
-  border: 0.2rem solid var(--secondary);
-  background: var(--triary);
-
-  transition: 0.2s ease;
+.mediumBotText {
+  display: none;
 }
 
-.botButtons label .bot{
-  color: var(--triary);
-  border: 0.2rem solid var(--secondary);
-  background: black;
+.hardBotText {
+  display: none;
 }
 
 /*Bot buttons style END*/
 
 .instructions .content {
   display: none;
-
+  position: absolute;
+  width: 24rem;
+  height: 14rem;
+  top: 50%;
+  margin-top: -7rem;
+  left: 50%;
+  margin-left: -12rem; 
   padding: 1rem;
-  font-size: 1.2rem;
-  background: #eee5;
+  font-size: 1.5rem;
+  background: #aad1d2e2;
 }
 
 .instructions .toggle-btn {
@@ -210,4 +192,38 @@ button:hover{
   margin: 0.2rem;
   padding: 0.2rem;
   font-size: 1rem;
+}
+
+.phase-2 .game-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.phase-2 .player-input {
+  width: 4rem;
+  height: 2.5rem;
+  margin: 1.5 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color:  #085151;
+}
+
+.phase-2 .guessButton {
+  font-size: 1.5rem;
+} 
+
+.messageFromGameManager, botGuess {
+  padding: 1rem;
+}
+
+.botIcon {
+  height: 5rem;
+  width: 5rem;
 }
