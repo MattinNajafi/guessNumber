@@ -173,18 +173,14 @@ button:hover{
 
 /*Bot buttons style*/
 
-.botButtons input[type="radio"] {
-  display: none;
+/* .botButtons input[type="radio"] {
 }
 
 .botButtons label {
   padding: 1rem;
   margin: 0.5rem;
-
-  color: var(--secondary);
-  border: 0.2rem solid var(--secondary);
+  color: var(--secondary); 
   background: var(--triary);
-
   transition: 0.2s ease;
 }
 
@@ -192,6 +188,23 @@ button:hover{
   color: var(--triary);
   border: 0.2rem solid var(--secondary);
   background: black;
+} */
+
+.botButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.easyBotText {
+  display: none;
+}
+
+.mediumBotText {
+  display: none;
+}
+
+.hardBotText {
+  display: none;
 }
 
 /*Bot buttons style END*/

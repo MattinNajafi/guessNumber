@@ -1,36 +1,37 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>guessNumber</title>
-    <script defer src="./build/bundle.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    
-<link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>guessNumber</title>
+  <script defer src="./build/bundle.js"></script>
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <header>
-      <img src="assets/images/logo.png" alt="">
-    </header>
-    
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7113c761e0.js" crossorigin="anonymous"></script>
 
-    <div class="phase phase-0">
-      <div>
-        <h3>Please enter your name:</h3>
-        <input type="text" placeholder="name:" class="inputNameField" />
-        <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
-      </div>
+</head>
+
+<body>
+  <header>
+    <img src="assets/images/logo.png" alt="">
+  </header>
+
+
+  <div class="phase phase-0">
+    <div>
+      <h3>Please enter your name:</h3>
+      <input type="text" placeholder="name:" class="inputNameField" />
+      <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
     </div>
+  </div>
   </div>
 
   <!-- end of phase 0-->
 
-    <div class="phase phase-1">
-      <div class="adjust-span">
+  <div class="phase phase-1">
+    <!-- <div class="adjust-span">
         <label for="span-radio-1" class="checked-label"
           >20
           <input
@@ -49,74 +50,72 @@
           >100
           <input type="radio" id="span-radio-3" name="span" value="100" />
         </label>
-      </div>
-      
-      <div class="botButtons">
-      <label for="easy" class="bot"
-          ><img src="assets/images/roboto.png" alt="">
-          <input
-            type="radio"
-            name="bot"
-            value="easy"
-            id="easy"
-            checked
-          />
-        </label>
-        <label for="medium" 
-          ><img src="assets/images/deep-learning.png" alt="">
-          <input 
-          type="radio" 
-          name="bot" 
-          id="medium"
-          value="medium"/>
-        </label>
-        <label for="hard" 
-          > <img src="assets/images/cs.png" alt="">
-          <input 
-          type="radio" 
-          name="bot" 
-          id="hard"
-          value="hard" />
-        </label>
-        </div>
+      </div> -->
 
-      <div>
-        <button class="startGameButton">START GAME</button>
+      
+      <div class="botText">
+      <div class="easyBotText">
+        <h2>Hi I'm Easy </h2>
+      </div>
+      <div class="mediumBotText">
+        <h2>Hi I'm Medium</h2>
+      </div>
+      <div class="hardBotText">
+        <h2>Hi I'm Hard</h2>
       </div>
     </div>
-    <!-- end of phase 1-->
+      
+      <div class="botButtons">
+      <button class="easyBot"><img src="assets/images/roboto.png" alt="">
+      </button>
+
+      <button class="mediumBot"><img src="assets/images/deep-learning.png" alt="">
+      </button>
+
+      <button class="hardBot"> <img src="assets/images/cs.png" alt="">
+      </button>
+
+    </div>
+
+
+    <div>
+      <button class="startGameButton">START GAME</button>
+    </div>
+  </div>
+  <!-- end of phase 1-->
 
   <div class="phase phase-2">
     <div class="game-area">
       <label for="player">Input your guess:</label>
       <div><input type="text" name="player" id="intLimitTextBox" class="player-input">
-      <button class="guessButton">OK</button></div>
+        <button class="guessButton">OK</button></div>
       <h3 class="messageFromGameManager"></h3>
       <div class="botIcon"></div>
       <h3>The bot guess:</h3>
       <h3 class="botGuess"></h3>
     </div>
-    
+
   </div>
   <!-- end of phase 2-->
 
 
-    <div class="phase phase-3">
-    </div>
-    <!-- end of phase 3-->
+  <div class="phase phase-3">
+  </div>
+  <!-- end of phase 3-->
 
-    <div class="instructions">
-      <div class="content">
-        <h3>HOW TO PLAY THE GAME</h3>
-        <br />
-        <p>If you don´t understand the rules! Don´t play. OK??</p>
-        <br />
-        <img src="assets/images/anime2.gif" alt="" />
-      </div>
-
-      <button class="toggle-btn">HELP <i class="fas fa-life-ring"></i></i></button>
+  <div class="instructions">
+    <div class="content">
+      <h3>HOW TO PLAY THE GAME</h3>
+      <br />
+      <p>If you don´t understand the rules! Don´t play. OK??</p>
+      <br />
+      <img src="assets/images/anime2.gif" alt="" />
     </div>
 
-    <button class="TEST">TEST</button>
-  </body>
+    <button class="toggle-btn">HELP <i class="fas fa-life-ring"></i></i></button>
+  </div>
+
+  <button class="TEST">TEST</button>
+</body>
+
 </html>

@@ -43,26 +43,44 @@ class ClickEvents {
     return guessSpan;
   }
 
-  botButtonsRadios(): any {
-    let botRadios: any = document.querySelectorAll(
-      ".botButtons input[type='radio']"
-    );
-    let botLabels: any = document.querySelectorAll(".botButtons label");
+  public displayBotPresentation(): void {
+    let easyBot: any = document.querySelector(".easyBot");
+    let easyBotText: any = document.querySelector(".easyBotText");
+    /* let mediumBot: any = document.querySelector(".mediumBot");
+    let mediumBotText: any = document.querySelector(".mediumBotText");
+    let hardBot: any = document.querySelector(".hardBot");
+    let hardBotText: any = document.querySelector(".hardBotText"); */
+    let open: Boolean = false;
 
-    for (let i = 0; i < botRadios.length; i++) {
-      botRadios[i].addEventListener("input") 
-      {
-        for (let j = 0; j < botRadios.length; j++) {
-          if (!botRadios[j].checked) {
-            botLabels[j].classList.remove(".bot");
-          }
-        }
-        if (botRadios[i].checked) {
-          botLabels[i].classList.add(".bot");
-        }
-      };
-    }
+    easyBot.addEventListener("click", function() {
+      if (!open) {
+        easyBotText.style.display = "block";
+        open = true;
+      } else if (open) {
+        easyBotText.style.display = "none";
+        open = false;
+      }
+    });
 
+  /*   mediumBot.addEventListener("click", function() {
+      if (!open) {
+        mediumBotText.style.display = "none";
+        open = true;
+      } else if (open) {
+        mediumBotText.style.display = "block";
+        open = false;
+      }
+    });
+
+    hardBot.addEventListener("click", function() {
+      if (!open) {
+        hardBotText.style.display = "none";
+        open = true;
+      } else if (open) {
+        hardBotText.style.display = "block";
+        open = false;
+      }
+    }); */
   }
 
   public testButton(logtext: number | string) {
