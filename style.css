@@ -256,3 +256,14 @@ margin:0.5rem;
   height: 15rem;
   width: 15rem;
 }
+
+#highScore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Raleway', sans-serif;
+}

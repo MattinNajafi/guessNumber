@@ -146,7 +146,7 @@ class ClickEvents {
     let testButton: any = document.querySelector(".TEST");
     testButton.addEventListener("click", function() {
       // test whatever here
-
+      
       console.log(logtext);
     });
   }
