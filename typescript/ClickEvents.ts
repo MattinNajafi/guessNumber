@@ -3,8 +3,7 @@ class ClickEvents {
   public playAgain(): void{
     let playAgain: any = document.getElementById("restart")
     playAgain.addEventListener("click", function(gamePhase:number){
-      gamePhase = 0;
-      updatePhase(gamePhase);
+      location.reload()
     })
   }
 
