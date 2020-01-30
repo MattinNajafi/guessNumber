@@ -8,35 +8,44 @@ window.addEventListener("load", init);
 
 function init(): void {
   let gamePhase: number = 0;
-  let guessSpan: number = 20; //make the user choose this with a range or dropdown
+  let guessSpan: number = 100; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
+  let guessList: Array<number> = [];
+  let score: number = guessList.length
 
-  // const onGuessSpanChanged = (span: number) => (guessSpan = span);
+  const whatBot: number = Math.floor(Math.random() * 3);
 
   const clickEvents = new ClickEvents();
   const keyEvents = new KeyEvents();
   const computer = new CPU(guessSpan);
   const bot = new Bot(computer, yourTurn);
 
-  //Initiate clickevents
-  
+  // Initiate clickevents
   clickEvents.toggleInstructions();
-  clickEvents.playAgain();
   clickEvents.submitPlayerName(gamePhase);
   clickEvents.startGame(gamePhase);
+  clickEvents.submitGuess(
+    computer,
+    gamePhase,
+    yourTurn,
+    bot,
+    guessList,
+    whatBot
+  );
+  clickEvents.playAgain();
+  clickEvents.testButton(guessList)
 
   // Initiate keyevents
-  keyEvents.submitYourGuess(computer, gamePhase, yourTurn, bot);
+  keyEvents.submitGuess(computer, gamePhase, yourTurn, bot, guessList, whatBot);
 
   updatePhase(gamePhase);
 
-  setInputFilter(document.getElementById("intLimitTextBox"), (
-    value: string, guessSpan: number
-  ) => {
-    return (
-      /^\d*$/.test(value) && (value === "" || parseInt(value) <= 20)
-    );
-  });
+  setInputFilter(
+    document.getElementById("intLimitTextBox"),
+    (value: string) => {
+      return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 100);
+    }
+  );
 }
 
 function updatePhase(gamePhase: number): void {
