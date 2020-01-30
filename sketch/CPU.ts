@@ -38,7 +38,7 @@ class CPU {
         console.log("Bot wins!");
         (document.querySelector(
           ".conclusion"
-        ) as HTMLHeadingElement).innerText = "Bobot guessed" + ' ' + this.correctAnswer + ' ' + "and won this round!";
+        ) as HTMLHeadingElement).innerText = "Bobot guessed" + ' ' + this.correctAnswer + ' ' + "and won!";
         gamePhase = 3;
         updatePhase(gamePhase);
       } else if (guess < this.correctAnswer) {
@@ -57,7 +57,7 @@ class CPU {
       if (guess == this.correctAnswer) {
         (document.querySelector(
           ".conclusion"
-        ) as HTMLHeadingElement).innerText = "You guessed" + ' ' + this.correctAnswer + ' ' + "and won this round!";
+        ) as HTMLHeadingElement).innerText = "You guessed" + ' ' + this.correctAnswer + ' ' + "and won!";
 
         score = guessList.length;
         gamePhase = 3;
