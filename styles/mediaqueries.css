@@ -31,6 +31,17 @@
 
     .adjust-span > * {
         font-size: 2.7rem;
+    }
+
+    .content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .instructions .content {
+        width: 17rem;
+        height: 16rem;
+        margin-left: -9.5rem; 
+        font-size: 1.08rem;
       }
 }
 
@@ -55,4 +66,19 @@
     .adjust-span > * {
         font-size: 1rem;
       }
+
+    .content h3 {
+        font-size: 1rem;
+    }
+    
+    .instructions .content {
+        width: 15rem;
+        height: 14rem;
+        margin-left: -8.5rem; 
+        font-size: 0.94rem;
+      }
+    
+    .conclusion {
+        font-size: large;
+    }
 }
