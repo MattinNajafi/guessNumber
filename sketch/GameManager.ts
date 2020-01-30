@@ -11,7 +11,6 @@ function init(): void {
   let guessSpan: number = 100; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
   let guessList: Array<number> = [];
-  let score: number = guessList.length
 
   const whatBot: number = Math.floor(Math.random() * 3);
 
@@ -20,7 +19,8 @@ function init(): void {
   const computer = new CPU(guessSpan);
   const bot = new Bot(computer, yourTurn);
 
-  // Initiate clickevents
+  //Initiate clickevents
+  
   clickEvents.toggleInstructions();
   clickEvents.submitPlayerName(gamePhase);
   clickEvents.startGame(gamePhase);
@@ -69,7 +69,6 @@ function updatePhase(gamePhase: number): void {
 
     // main manu
     // choose bot
-    // guessspan ??
     // play
   } else if (gamePhase == 2) {
     phase_0.style.display = "none";
@@ -102,16 +101,16 @@ function setInputFilter(textbox: any, inputFilter: any) {
     "contextmenu",
     "drop"
   ].forEach(function(event) {
-    textbox.addEventListener(event, function(): void {
-      if (inputFilter(this.value)) {
-        this.oldValue = this.value;
-        this.oldSelectionStart = this.selectionStart;
-        this.oldSelectionEnd = this.selectionEnd;
-      } else if (this.hasOwnProperty("oldValue")) {
-        this.value = this.oldValue;
-        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+    textbox.addEventListener(event, function() {
+      if (inputFilter(textbox.value)) {
+        textbox.oldValue = textbox.value;
+        textbox.oldSelectionStart = textbox.selectionStart;
+        textbox.oldSelectionEnd = textbox.selectionEnd;
+      } else if (textbox.hasOwnProperty("oldValue")) {
+        textbox.value = textbox.oldValue;
+        textbox.setSelectionRange(textbox.oldSelectionStart, textbox.oldSelectionEnd);
       } else {
-        this.value = "";
+        textbox.value = "";
       }
     });
   });

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>guessNumber</title>
   <script defer src="./build/bundle.js"></script>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="mediaqueries.css">
 
   <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway&display=swap" rel="stylesheet">
@@ -27,30 +27,28 @@
       <button class="submitNameButton">SUBMIT <i class="fas fa-chevron-right"></i></button>
     </div>
   </div>
-  </div>
 
   <!-- end of phase 0-->
 
   <div class="phase phase-1">
     <div class="botPresentation">
-      <img src="assets/images/bobot.png" alt="">
+      <img src="assets/images/bobot.png">
     </div>
     <div class="botButtons">
-      <button class="easy"><img src="assets/images/deep-learning.png" alt=""></button>
+      <button class="easy"><img src="assets/images/deep-learning.png"></button>
     </div>
     <div>
       <button class="startGameButton">START GAME</button>
     </div>
   </div>
-  </div>
-  <!-- end of phase 1-->
 
+  <!-- end of phase 1-->
 
   <div class="phase phase-2">
     <div class="game-area">
 
       <div class="side player-side">
-        <img class="playerImg" src="assets/images/man (1).png" alt="">
+        <img class="playerImg" src="assets/images/man (1).png">
         <h2 class="player-message"></h2>
         <h3 class="player-guess"></h3>
         <label for="player">Input your guess:</label>
@@ -59,18 +57,18 @@
       </div>
 
       <div class="side bot-side">
-        <img class="botImgs" src="assets/images/botlogo.png" alt="">
+        <img class="botImgs" src="assets/images/botlogo.png">
         <h2 class="bot-message"></h2>
         <h3 class="bot-guess"></h3>
       </div>
-
     </div>
   </div>
   <!-- end of phase 2-->
 
+
   <div class="phase phase-3">
-    <button id="restart"> PLAY AGAIN</button>
     <h3 class="conclusion"></h3>
+    <button id="restart"> PLAY AGAIN</button>
   </div>
   <!-- end of phase 3-->
 
@@ -80,7 +78,8 @@
       <br />
       <p>If you don´t understand the rules! You shouldn't play. But OK, here are the rules anyway:
         <br />
-        You and Bobot will try to guess the secret number. You have as many turns as needed, but remeber, the first one
+        You and Bobot will try to guess the secret number between 0-100. You have as many turns as needed, but remeber,
+        the first one
         who guesses the correct number wins.
         <br />
         Just press <strong>START GAME</strong> to play!

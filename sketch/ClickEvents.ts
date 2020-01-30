@@ -1,7 +1,8 @@
 class ClickEvents {
-  public playAgain(): void {
-    let playAgain: any = document.getElementById("restart");
-    playAgain.addEventListener("click", function(gamePhase: number) {
+
+  public playAgain(): void{
+    let playAgain: any = document.getElementById("restart")
+    playAgain.addEventListener("click", function(gamePhase:number){
       gamePhase = 0;
       updatePhase(gamePhase);
     });
@@ -18,22 +19,6 @@ class ClickEvents {
         open = true;
       } else if (open) {
         content.style.display = "none";
-        open = false;
-      }
-    });
-  }
-
-  public displayBotPresentation(): void {
-    let easyBot: any = document.querySelector(".easyBot");
-    let easyBotText: any = document.querySelector(".easyBotText");
-    let open: Boolean = false;
-
-    easyBot.addEventListener("click", function() {
-      if (!open) {
-        easyBotText.style.display = "block";
-        open = true;
-      } else if (open) {
-        easyBotText.style.display = "none";
         open = false;
       }
     });
