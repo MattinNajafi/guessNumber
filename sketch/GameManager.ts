@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 0;
+  let gamePhase: number = 3;
   let guessSpan: number = 20; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
 
@@ -19,9 +19,7 @@ function init(): void {
   const bot = new Bot(computer, yourTurn);
 
   //Initiate clickevents
-  // clickEvents.testButton(bot);
-  // clickEvents.guessSpanRadios();
-
+  
   clickEvents.toggleInstructions();
   clickEvents.playAgain();
   clickEvents.submitPlayerName(gamePhase);
@@ -62,7 +60,6 @@ function updatePhase(gamePhase: number): void {
 
     // main manu
     // choose bot
-    // guessspan ??
     // play
   } else if (gamePhase == 2) {
     phase_0.style.display = "none";

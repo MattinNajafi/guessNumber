@@ -5,25 +5,21 @@
   --light: #eee;
 }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
-
-  /* border: 1px solid #f44; */
 }
 
 body {
   height: 100%;
   font-family: 'Quicksand', sans-serif;
-  background-image: linear-gradient(to top left, #389596, #aad1d2); 
+  background-image: linear-gradient(to top left, #389596, #aad1d2);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-h3{
+h3 {
   margin: 0.3rem;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
@@ -31,7 +27,7 @@ h3{
   font-family: 'Raleway', sans-serif;
 }
 
-h2{
+h2 {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -40,19 +36,6 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-}
-
-.enterNameTitle {
-  width: 15rem;
-  font-size: medium;
-  display: flex;
-  justify-content: center;
-}
-
-.inputNameField{
-  width: 15rem;
-  padding: 0.5rem;
-  border: none;
 }
 
 .phase-0 {
@@ -66,8 +49,25 @@ header {
   align-items: center;
 }
 
+.enterNameTitle {
+  width: 15rem;
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+}
+
+.inputNameField {
+  width: 15rem;
+  padding: 0.5rem;
+  border: none;
+}
+
+/* END OF PHASE 0 */
+
 .phase-1 {
   display: none;
+  display: flex;
+  justify-content: center;
 }
 
 .phase-1 div {
@@ -80,7 +80,7 @@ header {
   padding: 0rem 10rem 0rem 0rem;
 }
 
-button{
+button {
   background: #085151;
   padding: 0.7rem;
   color: #aad1d2;
@@ -89,7 +89,7 @@ button{
   margin: 0.5rem;
 }
 
-button:hover{
+button:hover {
   background: #0a6868;
   cursor: pointer;
 }
@@ -98,13 +98,6 @@ button:hover{
   font-size: 40;
   background: none;
   border: none;
-}
-
-.botButtons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
 }
 
 .botButtons button {
@@ -119,104 +112,10 @@ button:hover{
   display: flex;
 }
 
+/* END OF PHASE 1 */
+
 .phase-2 {
   display: none;
-}
-.phase-3 {
-  display: none;
-}
-
-.adjust-span {
-  display: flex;
-}
-
-.adjust-span > * {
-  font-size: 4rem;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-.phase-1 {
-  /* display: none; */
-  display: flex;
-  justify-content: center;
-}
-.adjust-span input[type="radio"] {
-  display: none;
-  margin: 1rem;
-}
-.adjust-span label {
-  padding: 1rem;
-  margin: 0.5rem;
-
-  color: var(--secondary);
-  border: 0.2rem solid var(--secondary);
-  background: var(--triary);
-
-  transition: 0.2s ease;
-}
-.adjust-span label.checked-label {
-  color: var(--triary);
-  border: 0.2rem solid var(--secondary);
-  background: var(--secondary);
-}
-
-/*Bot buttons style*/
-
-.easyBotText {
-  display: none;
-}
-
-.mediumBotText {
-  display: none;
-}
-
-.hardBotText {
-  display: none;
-}
-label[for=player]
-{
-margin:0.5rem;
-}
-.side{
-  display: flex;
-  /* justify-content: center; */
-  flex-direction: column;
-  align-items: center;
-}
-
-.player-side, .bot-side{
-  margin: 0.5rem;
-}
-/*Bot buttons style END*/
-
-.playerImg, .botImgs{
-  display: none;
-}
-.instructions .content {
-  display: none;
-  position: absolute;
-  width: 24rem;
-  height: 23rem;
-  top: 50%;
-  margin-top: -11.5rem;
-  left: 50%;
-  margin-left: -12rem; 
-  padding: 1rem;
-  font-size: 1.5rem;
-  background: #aad1d2e2;
-  color: #0a6868;
-}
-
-.instructions .toggle-btn {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  font-size: 1rem;
 }
 
 .phase-2 .game-area {
@@ -237,22 +136,69 @@ margin:0.5rem;
   margin: 1.5 0.5rem;
   text-align: center;
   font-size: 1.5rem;
-  color:  #085151;
+  color: #085151;
 }
 
 .phase-2 .guessButton {
   font-size: 1.5rem;
-} 
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-side, .bot-side {
+  margin: 0.5rem;
+}
+
+.playerImg, .botImgs {
+  display: none;
+}
 
 .messageFromGameManager, botGuess {
   padding: 1rem;
 }
 
-.player-guess, .bot-guess{
+.player-guess, .bot-guess {
   font-size: 1.3rem;
 }
 
 .botIcon {
   height: 15rem;
   width: 15rem;
+}
+
+/* END OF PHASE 2 */
+
+.phase-3 {
+  display: none;
+  justify-content: center;
+}
+
+/* END OF PHASE 3 */
+
+.instructions .content {
+  display: none;
+  position: absolute;
+  width: 24rem;
+  height: 23rem;
+  top: 50%;
+  margin-top: -11.5rem;
+  left: 50%;
+  margin-left: -12rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: #aad1d2e2;
+  color: #0a6868;
+}
+
+.instructions .toggle-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  font-size: 1rem;
 }
