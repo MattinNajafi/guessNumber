@@ -20,10 +20,8 @@ class CPU {
     let playerMessage: any = document.querySelector(".player-message");
     let botGuess: any = document.querySelector(".bot-guess");
     let playerGuess: any = document.querySelector(".player-guess");
-    let score: number;
     let playerImg: any = document.querySelector(".playerImg");
     let botImg: any = document.querySelector(".botImgs");
-    let guessList: Array<number> = [];
 
     if (turn) {
       playerImg.style.display = "block";
