@@ -19,8 +19,7 @@ function init(): void {
   const computer = new CPU(guessSpan);
   const bot = new Bot(computer, yourTurn);
 
-  //Initiate clickevents
-  
+  // Initiate clickevents
   clickEvents.toggleInstructions();
   clickEvents.submitPlayerName(gamePhase);
   clickEvents.startGame(gamePhase);
@@ -86,7 +85,7 @@ function updatePhase(gamePhase: number): void {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "none";
-    phase_3.style.display = "block";
+    phase_3.style.display = "flex";
 
     // show highscore
     // play again
