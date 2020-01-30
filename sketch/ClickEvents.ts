@@ -1,4 +1,19 @@
 class ClickEvents {
+
+  // private guessSpanCallback: (span: number) => void;
+
+  // constructor(guessSpanCallback: (span: number) => void) {
+  //   this.guessSpanCallback = guessSpanCallback;
+  // }
+
+  public playAgain(): void{
+    let playAgain: any = document.getElementById("restart")
+    playAgain.addEventListener("click", function(gamePhase:number){
+      gamePhase = 0;
+      updatePhase(gamePhase);
+    })
+  }
+
   public toggleInstructions(): void {
     let toggleBtn: any = document.querySelector(".toggle-btn");
     let content: any = document.querySelector(".instructions .content");
@@ -43,12 +58,46 @@ class ClickEvents {
   //   return guessSpan;
   // }
 
-  public testButton(logtext: number | string) {
-    let testButton: any = document.querySelector(".TEST");
-    testButton.addEventListener("click", function() {
-      console.log(logtext);
+  public displayBotPresentation(): void {
+    let easyBot: any = document.querySelector(".easyBot");
+    let easyBotText: any = document.querySelector(".easyBotText");
+    /* let mediumBot: any = document.querySelector(".mediumBot");
+    let mediumBotText: any = document.querySelector(".mediumBotText");
+    let hardBot: any = document.querySelector(".hardBot");
+    let hardBotText: any = document.querySelector(".hardBotText"); */
+    let open: Boolean = false;
+
+    easyBot.addEventListener("click", function() {
+      if (!open) {
+        easyBotText.style.display = "block";
+        open = true;
+      } else if (open) {
+        easyBotText.style.display = "none";
+        open = false;
+      }
     });
+
+    /*   mediumBot.addEventListener("click", function() {
+      if (!open) {
+        mediumBotText.style.display = "none";
+        open = true;
+      } else if (open) {
+        mediumBotText.style.display = "block";
+        open = false;
+      }
+    });
+
+    hardBot.addEventListener("click", function() {
+      if (!open) {
+        hardBotText.style.display = "none";
+        open = true;
+      } else if (open) {
+        hardBotText.style.display = "block";
+        open = false;
+      }
+    }); */
   }
+
   public submitPlayerName(gamePhase: number) {
     let submitNameButton: any = document.querySelector(".submitNameButton");
     let inputNameField: any = document.querySelector(".inputNameField");
@@ -70,6 +119,7 @@ class ClickEvents {
       //else display a red border around the input field
     });
   }
+
   public submitGuess(computer: any) {
     let guessButton: any = document.querySelector(".guessButton");
     let playerGuessInput: any = document.querySelector(".player-input");
@@ -80,17 +130,24 @@ class ClickEvents {
       computer.checkNumber(playerGuess);
     });
   }
-  public startGame(gamePhase:number){
-    let startGameButton: any = document.querySelector(".startGameButton")
-    gamePhase = gamePhase
 
-    startGameButton.addEventListener("click",function(gamePhase: number){
+  public startGame(gamePhase: number) {
+    let startGameButton: any = document.querySelector(".startGameButton");
+    gamePhase = gamePhase;
+
+    startGameButton.addEventListener("click", function(gamePhase: number) {
       gamePhase = 2;
       updatePhase(gamePhase);
-    
-    })
+    });
   }
 
+  // TEST BUTTON
+  public testButton(logtext: any) {
+    let testButton: any = document.querySelector(".TEST");
+    testButton.addEventListener("click", function() {
+      // test whatever here
 
-
+      console.log(logtext);
+    });
+  }
 }

@@ -159,6 +159,21 @@ button:hover{
   background: var(--secondary);
 }
 
+/*Bot buttons style*/
+
+.easyBotText {
+  display: none;
+}
+
+.mediumBotText {
+  display: none;
+}
+
+.hardBotText {
+  display: none;
+}
+
+/*Bot buttons style END*/
 
 .instructions .content {
   display: none;

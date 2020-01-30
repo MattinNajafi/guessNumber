@@ -48,20 +48,29 @@
 
   <div class="phase phase-2">
     <div class="game-area">
-      <label for="player">Input your guess:</label>
-      <div><input type="text" name="player" id="intLimitTextBox" class="player-input">
-        <button class="guessButton">OK</button></div>
-      <h3 class="messageFromGameManager"></h3>
-      <img class="botIcon" src="assets/images/deep-learning.png" alt="">
-      <h3>The bot guess:</h3>
-      <h3 class="botGuess"></h3>
-    </div>
 
+      <div class="side player-side">
+        <h2 class="player-message"></h2>
+        <h3 class="player-guess"></h3>
+        <label for="player">Input your guess:</label>
+        <input type="text" name="player" id="intLimitTextBox" class="player-input">
+      </div>
+
+      <div class="side bot-side">
+        <h2 class="bot-message"></h2>
+        <h3 class="bot-guess"></h3>
+        <p>H3ll0 :: 1 :: 4M :: 7h3 :: S700P1D ::B07</p>
+        <p>4ND :: 1 :: W1LL :: BR34K :: Y0U</p>
+      </div>
+
+    </div>
   </div>
   <!-- end of phase 2-->
 
-
   <div class="phase phase-3">
+    <h2>phase_3</h2>
+    <button id="restart"> PLAY AGAIN</button>
+    <h3 class="conclusion"></h3>
   </div>
   <!-- end of phase 3-->
 

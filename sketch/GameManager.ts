@@ -7,30 +7,37 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 1;
+  let gamePhase: number = 2;
   let guessSpan: number = 20; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
 
+  // const onGuessSpanChanged = (span: number) => (guessSpan = span);
+
   const clickEvents = new ClickEvents();
   const keyEvents = new KeyEvents();
-  const computer = new CPU();
+  const computer = new CPU(guessSpan);
+  const bot = new Bot(computer, yourTurn);
 
   //Initiate clickevents
-  clickEvents.testButton(computer.info);
-  clickEvents.toggleInstructions();
-  clickEvents.submitPlayerName(gamePhase);
+  // clickEvents.testButton(bot);
   // clickEvents.guessSpanRadios();
+
+  clickEvents.toggleInstructions();
+  clickEvents.playAgain();
+  clickEvents.submitPlayerName(gamePhase);
   clickEvents.startGame(gamePhase);
 
   // Initiate keyevents
-  keyEvents.submitYourGuess(computer, gamePhase, yourTurn);
+  keyEvents.submitYourGuess(computer, gamePhase, yourTurn, bot);
 
   updatePhase(gamePhase);
 
-  setInputFilter(document.getElementById("intLimitTextBox"), function(
-    value: string
-  ) {
-    return /^\d*$/.test(value) && (value === "" || parseInt(value) <= guessSpan);
+  setInputFilter(document.getElementById("intLimitTextBox"), (
+    value: string, guessSpan: number
+  ) => {
+    return (
+      /^\d*$/.test(value) && (value === "" || parseInt(value) <= 20)
+    );
   });
 }
 
@@ -66,7 +73,7 @@ function updatePhase(gamePhase: number): void {
     // game phase
     // guess if it's your turn
     // correct awnser = win
-    // incorrect answer 
+    // incorrect answer
   } else if (gamePhase == 3) {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
@@ -102,4 +109,3 @@ function setInputFilter(textbox: any, inputFilter: any) {
     });
   });
 }
-
