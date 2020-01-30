@@ -17,7 +17,7 @@ class Bot {
 
   //
   public easy() {
-    this.botGuess = Math.random() * 20;
+    this.botGuess = Math.random() * 100;
     console.log("easy Bot guessing : " + this.botGuess);
     this.computer.checkNumber(Math.floor(this.botGuess), 2, this.yourTurn);
   }
@@ -25,7 +25,7 @@ class Bot {
     if (computer.higherList.length > 0) {
       this.under = computer.higherList.sort()[0];
     } else {
-      this.under = 20;
+      this.under = 100;
     }
     if (computer.lowerList.length > 0) {
       this.over = computer.lowerList.sort()[computer.lowerList.length - 1];
@@ -44,7 +44,7 @@ class Bot {
     if (computer.higherList.length > 0) {
       this.under = computer.higherList.sort(this.sortNumber)[0];
     } else {
-      this.under = 20;
+      this.under = 100;
     }
     if (computer.lowerList.length > 0) {
       this.over = computer.lowerList.sort(this.sortNumber)[computer.lowerList.length - 1];
