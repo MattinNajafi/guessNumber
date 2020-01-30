@@ -21,10 +21,13 @@ class CPU {
     let botGuess: any = document.querySelector(".bot-guess");
     let playerGuess: any = document.querySelector(".player-guess");
     let score: number;
+    let playerImg: any = document.querySelector(".playerImg")
+    let botImg: any = document.querySelector(".botImgs")
     let guessList: Array<number> = [];
 
     if (turn) {
-      botGuess.textContent = "I guess :" + guess;
+      playerImg.style.display = "block"
+      botGuess.textContent = "Bobot guess :" + guess;
       if (
         guess == this.correctAnswer &&
         !(
@@ -35,7 +38,7 @@ class CPU {
         console.log("Bot wins!");
         (document.querySelector(
           ".conclusion"
-        ) as HTMLHeadingElement).innerText = "Bot Wins! you suck!! HAhahahahaa";
+        ) as HTMLHeadingElement).innerText = "Bobot guessed" + ' ' + this.correctAnswer + ' ' + "and won!";
         gamePhase = 3;
         updatePhase(gamePhase);
       } else if (guess < this.correctAnswer) {
@@ -47,13 +50,14 @@ class CPU {
       }
     }
     if (!turn) {
+      botImg.style.display = "block"
       guessList.push(guess);
-      playerGuess.textContent = "I guess :" + guess;
+      playerGuess.textContent = "You guess :" + guess;
       console.log("guessList " + guessList);
       if (guess == this.correctAnswer) {
         (document.querySelector(
           ".conclusion"
-        ) as HTMLHeadingElement).innerText = "You win!";
+        ) as HTMLHeadingElement).innerText = "You guessed" + ' ' + this.correctAnswer + ' ' + "and won!";
 
         score = guessList.length;
         gamePhase = 3;
