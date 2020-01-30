@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 2;
+  let gamePhase: number = 0;
   let guessSpan: number = 100; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
   let guessList: Array<number> = [];
@@ -75,6 +75,8 @@ function updatePhase(gamePhase: number): void {
     phase_1.style.display = "none";
     phase_2.style.display = "block";
     phase_3.style.display = "none";
+
+    (document.querySelector(".player-input") as HTMLInputElement).focus()
 
     // game phase
     // guess if it's your turn

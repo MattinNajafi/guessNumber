@@ -28,6 +28,7 @@ class ClickEvents {
     let submitNameButton: any = document.querySelector(".submitNameButton");
     let inputNameField: any = document.querySelector(".inputNameField");
     gamePhase = gamePhase;
+    inputNameField.focus()
 
     submitNameButton.addEventListener("click", function(gamePhase: number) {
       // if submit button is pressed and the game is in the first phase go to next phase
