@@ -32,7 +32,7 @@ function init(): void {
     whatBot
   );
   clickEvents.playAgain();
-  clickEvents.testButton(guessList)
+  clickEvents.testButton(guessList);
 
   // Initiate keyevents
   keyEvents.submitGuess(computer, gamePhase, yourTurn, bot, guessList, whatBot);
@@ -75,7 +75,7 @@ function updatePhase(gamePhase: number): void {
     phase_2.style.display = "block";
     phase_3.style.display = "none";
 
-    (document.querySelector(".player-input") as HTMLInputElement).focus()
+    (document.querySelector(".player-input") as HTMLInputElement).focus(); //focus on the input field
 
     // game phase
     // guess if it's your turn
@@ -109,7 +109,10 @@ function setInputFilter(textbox: any, inputFilter: any) {
         textbox.oldSelectionEnd = textbox.selectionEnd;
       } else if (textbox.hasOwnProperty("oldValue")) {
         textbox.value = textbox.oldValue;
-        textbox.setSelectionRange(textbox.oldSelectionStart, textbox.oldSelectionEnd);
+        textbox.setSelectionRange(
+          textbox.oldSelectionStart,
+          textbox.oldSelectionEnd
+        );
       } else {
         textbox.value = "";
       }
