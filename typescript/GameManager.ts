@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 3;
+  let gamePhase: number = 0;
   let guessSpan: number = 20; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
 
