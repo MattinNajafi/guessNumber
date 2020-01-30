@@ -76,6 +76,7 @@ function updatePhase(gamePhase: number): void {
     phase_1.style.display = "none";
     phase_2.style.display = "none";
     phase_3.style.display = "flex";
+    savePlayerScore()
 
     // show highscore
     // play again

@@ -14,7 +14,6 @@ function savePlayerScore() {
     getNameAndScore.sort(function (a: any, b: any) { return (a.score - b.score) })
 
     for (let i = 0; i < getNameAndScore.length; i++) {
-        console.log(getNameAndScore[i].name + " - score: " + getNameAndScore[i].score)
         let listElement = document.createElement("li")
         let listItem = document.createTextNode(getNameAndScore[i].name + " - score: " + getNameAndScore[i].score)
         listElement.appendChild(listItem)
