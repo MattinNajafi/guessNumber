@@ -1,8 +1,8 @@
 class ClickEvents {
-
+  
   public playAgain(): void{
     let playAgain: any = document.getElementById("restart")
-    playAgain.addEventListener("click", function(gamePhase:number){
+    playAgain.addEventListener("click", function(){
 
       location.reload()
     })
@@ -29,11 +29,11 @@ class ClickEvents {
     let inputNameField: any = document.querySelector(".inputNameField");
     gamePhase = gamePhase;
     inputNameField.focus()
-
-    submitNameButton.addEventListener("click", function(gamePhase: number) {
+    let functionForSubmitButton;
+    submitNameButton.addEventListener("click", functionForSubmitButton = (gamePhase: number) => {
       // if submit button is pressed and the game is in the first phase go to next phase
       if (!(inputNameField.value == "")) {
-        savePlayerScore()
+        // savePlayerName()
         
         
 

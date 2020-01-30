@@ -40,7 +40,7 @@ class CPU {
         ) as HTMLHeadingElement).innerText =
           "Bobot guessed" + " " + this.correctAnswer + " " + "and won!";
         gamePhase = 3;
-        updatePhase(gamePhase);
+        updatePhase(3)
       } else if (guess < this.correctAnswer) {
         botMessage.textContent = "TOO LOW!";
         this.lowerList.push(guess);
@@ -60,8 +60,8 @@ class CPU {
 
         gamePhase = 3;
         console.log("You win!");
-
         updatePhase(gamePhase);
+        savePlayerScore(this.higherList,this.lowerList)
       } else if (guess < this.correctAnswer) {
         playerMessage.textContent = "TOO LOW!";
         this.lowerList.push(guess);

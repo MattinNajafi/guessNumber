@@ -1,16 +1,24 @@
-function savePlayerScore() {
+function savePlayerName(){
+    let savePlayerName: any = document.querySelector(".inputNameField")
+    let playerName: string = savePlayerName.value
+    localStorage.setItem('name', playerName);
+}
+
+function savePlayerScore(higherList:Array<Number>,lowerList:Array<Number>) {
     let getNameAndScore;
+    let savePlayerName: any = document.querySelector(".inputNameField")
+    let playerName: string = savePlayerName.value
     if (localStorage.getItem('hiscore') === null) {
         getNameAndScore = [];
     } else {
         getNameAndScore = JSON.parse(localStorage.getItem("hiscore") as string)
 
     }
-    let savePlayerName: any = document.querySelector(".inputNameField")
-    let playerName: string = savePlayerName.value
-    let score: number = Math.floor(Math.random() * 100)
-    let hiScoreList: any = { name: playerName, score: score }
+    console.log(higherList)
+    let score: number = Number(higherList.length) + Number(lowerList.length)
+    let hiScoreList: any = {name: playerName, score: score }
     getNameAndScore.push(hiScoreList)
+    console.log(getNameAndScore)
     getNameAndScore.sort(function (a: any, b: any) { return (a.score - b.score) })
 
     for (let i = 0; i < getNameAndScore.length; i++) {
