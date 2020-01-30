@@ -1,17 +1,10 @@
 class ClickEvents {
-
-  // private guessSpanCallback: (span: number) => void;
-
-  // constructor(guessSpanCallback: (span: number) => void) {
-  //   this.guessSpanCallback = guessSpanCallback;
-  // }
-
-  public playAgain(): void{
-    let playAgain: any = document.getElementById("restart")
-    playAgain.addEventListener("click", function(gamePhase:number){
+  public playAgain(): void {
+    let playAgain: any = document.getElementById("restart");
+    playAgain.addEventListener("click", function(gamePhase: number) {
       gamePhase = 0;
       updatePhase(gamePhase);
-    })
+    });
   }
 
   public toggleInstructions(): void {
@@ -30,41 +23,9 @@ class ClickEvents {
     });
   }
 
-  // public guessSpanRadios(): number {
-  //   let spanRadios: any = document.querySelectorAll(
-  //     ".adjust-span input[type='radio']"
-  //   );
-  //   let spanLabels: any = document.querySelectorAll(".adjust-span label");
-  //   let guessSpan: number = parseInt(
-  //     document.querySelector(".adjust-span .checked-label input").value
-  //   );
-
-  //   for (let i = 0; i < spanRadios.length; i++) {
-  //     spanRadios[i].addEventListener("input", function(
-  //       guessSpan: string | number
-  //     ) {
-  //       for (let j = 0; j < spanRadios.length; j++) {
-  //         if (!spanRadios[j].checked) {
-  //           spanLabels[j].classList.remove("checked-label");
-  //         }
-  //       }
-  //       if (spanRadios[i].checked) {
-  //         spanLabels[i].classList.add("checked-label");
-  //         guessSpan = parseInt(spanRadios[i].value);
-  //       }
-  //     });
-  //   }
-  //   console.log("4 : " + guessSpan);
-  //   return guessSpan;
-  // }
-
   public displayBotPresentation(): void {
     let easyBot: any = document.querySelector(".easyBot");
     let easyBotText: any = document.querySelector(".easyBotText");
-    /* let mediumBot: any = document.querySelector(".mediumBot");
-    let mediumBotText: any = document.querySelector(".mediumBotText");
-    let hardBot: any = document.querySelector(".hardBot");
-    let hardBotText: any = document.querySelector(".hardBotText"); */
     let open: Boolean = false;
 
     easyBot.addEventListener("click", function() {
@@ -76,26 +37,6 @@ class ClickEvents {
         open = false;
       }
     });
-
-    /*   mediumBot.addEventListener("click", function() {
-      if (!open) {
-        mediumBotText.style.display = "none";
-        open = true;
-      } else if (open) {
-        mediumBotText.style.display = "block";
-        open = false;
-      }
-    });
-
-    hardBot.addEventListener("click", function() {
-      if (!open) {
-        hardBotText.style.display = "none";
-        open = true;
-      } else if (open) {
-        hardBotText.style.display = "block";
-        open = false;
-      }
-    }); */
   }
 
   public submitPlayerName(gamePhase: number) {
@@ -118,15 +59,39 @@ class ClickEvents {
     });
   }
 
-  public submitGuess(computer: any) {
-    let guessButton: any = document.querySelector(".guessButton");
+  public submitGuess(
+    computer: any,
+    gamePhase: number,
+    yourTurn: boolean,
+    bot: any,
+    guesslist: Array<number>,
+    whatBot: number
+  ): void {
     let playerGuessInput: any = document.querySelector(".player-input");
     let playerGuess: number;
 
-    guessButton.addEventListener("click", function() {
-      playerGuess = playerGuessInput.value;
-      computer.checkNumber(playerGuess);
-    });
+    if (yourTurn) {
+      document.addEventListener("click", (): void => {
+        if (!(playerGuessInput.value == "")) {
+          playerGuess = parseInt(playerGuessInput.value);
+          guesslist.push(playerGuess);
+
+          playerGuessInput.value = "";
+          yourTurn = false;
+          console.log(yourTurn);
+
+          computer.checkNumber(playerGuess, gamePhase, yourTurn);
+
+          if (whatBot === 0) {
+            bot.easy();
+          } else if (whatBot === 1) {
+            bot.medium(computer);
+          } else if (whatBot === 2) {
+            bot.hard(computer);
+          }
+        }
+      });
+    }
   }
 
   public startGame(gamePhase: number) {
@@ -145,7 +110,7 @@ class ClickEvents {
     testButton.addEventListener("click", function() {
       // test whatever here
 
-      console.log(logtext);
+      console.log(logtext.length);
     });
   }
 }
