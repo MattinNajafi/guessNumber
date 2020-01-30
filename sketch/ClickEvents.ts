@@ -1,9 +1,18 @@
 class ClickEvents {
+
   // private guessSpanCallback: (span: number) => void;
 
   // constructor(guessSpanCallback: (span: number) => void) {
   //   this.guessSpanCallback = guessSpanCallback;
   // }
+
+  public playAgain(): void{
+    let playAgain: any = document.getElementById("restart")
+    playAgain.addEventListener("click", function(gamePhase:number){
+      gamePhase = 0;
+      updatePhase(gamePhase);
+    })
+  }
 
   public toggleInstructions(): void {
     let toggleBtn: any = document.querySelector(".toggle-btn");

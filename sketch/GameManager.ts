@@ -23,6 +23,7 @@ function init(): void {
   // clickEvents.guessSpanRadios();
 
   clickEvents.toggleInstructions();
+  clickEvents.playAgain();
   clickEvents.submitPlayerName(gamePhase);
   clickEvents.startGame(gamePhase);
 
