@@ -3,6 +3,7 @@ class ClickEvents {
   public playAgain(): void{
     let playAgain: any = document.getElementById("restart")
     playAgain.addEventListener("click", function(gamePhase:number){
+
       location.reload()
     })
   }
@@ -27,6 +28,7 @@ class ClickEvents {
     let submitNameButton: any = document.querySelector(".submitNameButton");
     let inputNameField: any = document.querySelector(".inputNameField");
     gamePhase = gamePhase;
+    inputNameField.focus()
 
     submitNameButton.addEventListener("click", function(gamePhase: number) {
       // if submit button is pressed and the game is in the first phase go to next phase
@@ -43,15 +45,39 @@ class ClickEvents {
     });
   }
 
-  public submitGuess(computer: any) {
-    let guessButton: any = document.querySelector(".guessButton");
+  public submitGuess(
+    computer: any,
+    gamePhase: number,
+    yourTurn: boolean,
+    bot: any,
+    guesslist: Array<number>,
+    whatBot: number
+  ): void {
     let playerGuessInput: any = document.querySelector(".player-input");
     let playerGuess: number;
 
-    guessButton.addEventListener("click", function() {
-      playerGuess = playerGuessInput.value;
-      computer.checkNumber(playerGuess);
-    });
+    if (yourTurn) {
+      document.addEventListener("click", (): void => {
+        if (!(playerGuessInput.value == "")) {
+          playerGuess = parseInt(playerGuessInput.value);
+          guesslist.push(playerGuess);
+
+          playerGuessInput.value = "";
+          yourTurn = false;
+          console.log(yourTurn);
+
+          computer.checkNumber(playerGuess, gamePhase, yourTurn);
+
+          if (whatBot === 0) {
+            bot.easy();
+          } else if (whatBot === 1) {
+            bot.medium(computer);
+          } else if (whatBot === 2) {
+            bot.hard(computer);
+          }
+        }
+      });
+    }
   }
 
   public startGame(gamePhase: number) {
@@ -70,7 +96,7 @@ class ClickEvents {
     testButton.addEventListener("click", function() {
       // test whatever here
 
-      console.log(logtext);
+      console.log(logtext.length);
     });
   }
 }

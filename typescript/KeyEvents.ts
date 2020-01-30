@@ -1,20 +1,20 @@
 class KeyEvents {
-  public submitYourGuess(
+  public submitGuess(
     computer: any,
     gamePhase: number,
     yourTurn: boolean,
-    bot: any
+    bot: any,
+    guessList: Array<number>,
+    whatBot: number
   ): void {
     let playerGuessInput: any = document.querySelector(".player-input");
     let playerGuess: number;
-    let guesslist: Array<number> = [];
 
     if (yourTurn) {
       document.addEventListener("keypress", (e): void => {
         if (e.key === "Enter" && !(playerGuessInput.value == "")) {
-          // document.querySelector(".player-message")
           playerGuess = parseInt(playerGuessInput.value);
-          guesslist.push(playerGuess);
+          guessList.push(playerGuess);
 
           playerGuessInput.value = "";
           yourTurn = false;
@@ -22,9 +22,13 @@ class KeyEvents {
 
           computer.checkNumber(playerGuess, gamePhase, yourTurn);
 
-          // bot.easy();
-          // bot.medium(computer);
-          bot.hard(computer);
+          if (whatBot === 0) {
+            bot.easy();
+          } else if (whatBot === 1) {
+            bot.medium(computer);
+          } else if (whatBot === 2) {
+            bot.hard(computer);
+          }
         }
       });
     }
