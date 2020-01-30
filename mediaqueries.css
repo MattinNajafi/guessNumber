@@ -77,4 +77,8 @@
         margin-left: -8.5rem; 
         font-size: 0.94rem;
       }
+    
+    .conclusion {
+        font-size: large;
+    }
 }

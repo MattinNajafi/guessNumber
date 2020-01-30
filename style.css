@@ -175,6 +175,7 @@ button:hover {
 .phase-3 {
   display: none;
   justify-content: center;
+  flex-direction: column;
 }
 
 /* END OF PHASE 3 */

@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 3;
+  let gamePhase: number = 0;
   let guessSpan: number = 20; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
 
@@ -75,7 +75,7 @@ function updatePhase(gamePhase: number): void {
     phase_0.style.display = "none";
     phase_1.style.display = "none";
     phase_2.style.display = "none";
-    phase_3.style.display = "block";
+    phase_3.style.display = "flex";
 
     // show highscore
     // play again
