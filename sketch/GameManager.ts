@@ -7,7 +7,7 @@
 window.addEventListener("load", init);
 
 function init(): void {
-  let gamePhase: number = 2;
+  let gamePhase: number = 0;
   let guessSpan: number = 20; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
 
@@ -96,15 +96,15 @@ function setInputFilter(textbox: any, inputFilter: any) {
     "drop"
   ].forEach(function(event) {
     textbox.addEventListener(event, function() {
-      if (inputFilter(this.value)) {
-        this.oldValue = this.value;
-        this.oldSelectionStart = this.selectionStart;
-        this.oldSelectionEnd = this.selectionEnd;
-      } else if (this.hasOwnProperty("oldValue")) {
-        this.value = this.oldValue;
-        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      if (inputFilter(textbox.value)) {
+        textbox.oldValue = textbox.value;
+        textbox.oldSelectionStart = textbox.selectionStart;
+        textbox.oldSelectionEnd = textbox.selectionEnd;
+      } else if (textbox.hasOwnProperty("oldValue")) {
+        textbox.value = textbox.oldValue;
+        textbox.setSelectionRange(textbox.oldSelectionStart, textbox.oldSelectionEnd);
       } else {
-        this.value = "";
+        textbox.value = "";
       }
     });
   });
