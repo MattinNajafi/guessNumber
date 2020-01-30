@@ -7,9 +7,9 @@ function savePlayerScore() {
 
     }
     let savePlayerName: any = document.querySelector(".inputNameField")
-    let playerNameValue: string = savePlayerName.value
+    let playerName: string = savePlayerName.value
     let score: number = Math.floor(Math.random() * 100)
-    let hiScoreList: any = { name: playerNameValue, score: score }
+    let hiScoreList: any = { name: playerName, score: score }
     getNameAndScore.push(hiScoreList)
     getNameAndScore.sort(function (a: any, b: any) { return (a.score - b.score) })
 
@@ -19,7 +19,7 @@ function savePlayerScore() {
         let listItem = document.createTextNode(getNameAndScore[i].name + " - score: " + getNameAndScore[i].score)
         listElement.appendChild(listItem)
         document.getElementById("highScore")?.appendChild(listElement)
-        if (i === 4) {
+        if (i === 9) {
             break;
         }
     }
