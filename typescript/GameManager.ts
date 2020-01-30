@@ -8,35 +8,43 @@ window.addEventListener("load", init);
 
 function init(): void {
   let gamePhase: number = 0;
-  let guessSpan: number = 20; //make the user choose this with a range or dropdown
+  let guessSpan: number = 100; //make the user choose this with a range or dropdown
   let yourTurn: boolean = true;
+  let guessList: Array<number> = [];
 
-  // const onGuessSpanChanged = (span: number) => (guessSpan = span);
+  const whatBot: number = Math.floor(Math.random() * 3);
 
   const clickEvents = new ClickEvents();
   const keyEvents = new KeyEvents();
   const computer = new CPU(guessSpan);
   const bot = new Bot(computer, yourTurn);
 
-  //Initiate clickevents
-  
+  // Initiate clickevents
   clickEvents.toggleInstructions();
-  clickEvents.playAgain();
   clickEvents.submitPlayerName(gamePhase);
   clickEvents.startGame(gamePhase);
+  clickEvents.submitGuess(
+    computer,
+    gamePhase,
+    yourTurn,
+    bot,
+    guessList,
+    whatBot
+  );
+  clickEvents.playAgain();
+  clickEvents.testButton(guessList);
 
   // Initiate keyevents
-  keyEvents.submitYourGuess(computer, gamePhase, yourTurn, bot);
+  keyEvents.submitGuess(computer, gamePhase, yourTurn, bot, guessList, whatBot);
 
   updatePhase(gamePhase);
 
-  setInputFilter(document.getElementById("intLimitTextBox"), (
-    value: string, guessSpan: number
-  ) => {
-    return (
-      /^\d*$/.test(value) && (value === "" || parseInt(value) <= 20)
-    );
-  });
+  setInputFilter(
+    document.getElementById("intLimitTextBox"),
+    (value: string) => {
+      return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 100);
+    }
+  );
 }
 
 function updatePhase(gamePhase: number): void {
@@ -66,6 +74,8 @@ function updatePhase(gamePhase: number): void {
     phase_1.style.display = "none";
     phase_2.style.display = "block";
     phase_3.style.display = "none";
+
+    (document.querySelector(".player-input") as HTMLInputElement).focus(); //focus on the input field
 
     // game phase
     // guess if it's your turn
@@ -100,7 +110,10 @@ function setInputFilter(textbox: any, inputFilter: any) {
         textbox.oldSelectionEnd = textbox.selectionEnd;
       } else if (textbox.hasOwnProperty("oldValue")) {
         textbox.value = textbox.oldValue;
-        textbox.setSelectionRange(textbox.oldSelectionStart, textbox.oldSelectionEnd);
+        textbox.setSelectionRange(
+          textbox.oldSelectionStart,
+          textbox.oldSelectionEnd
+        );
       } else {
         textbox.value = "";
       }

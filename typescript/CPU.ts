@@ -20,25 +20,25 @@ class CPU {
     let playerMessage: any = document.querySelector(".player-message");
     let botGuess: any = document.querySelector(".bot-guess");
     let playerGuess: any = document.querySelector(".player-guess");
-    let score: number;
-    let playerImg: any = document.querySelector(".playerImg")
-    let botImg: any = document.querySelector(".botImgs")
-    let guessList: Array<number> = [];
+    let playerImg: any = document.querySelector(".playerImg");
+    let botImg: any = document.querySelector(".botImgs");
 
     if (turn) {
-      playerImg.style.display = "block"
+      playerImg.style.display = "block";
       botGuess.textContent = "Bobot guess :" + guess;
       if (
         guess == this.correctAnswer &&
         !(
           (document.querySelector(".conclusion") as HTMLHeadingElement)
-            .innerText === "You win!"
+            .innerText ===
+          "You guessed" + " " + this.correctAnswer + " " + "and won!"
         )
       ) {
         console.log("Bot wins!");
         (document.querySelector(
           ".conclusion"
-        ) as HTMLHeadingElement).innerText = "Bobot guessed" + ' ' + this.correctAnswer + ' ' + "and won!";
+        ) as HTMLHeadingElement).innerText =
+          "Bobot guessed" + " " + this.correctAnswer + " " + "and won!";
         gamePhase = 3;
         updatePhase(gamePhase);
       } else if (guess < this.correctAnswer) {
@@ -50,19 +50,16 @@ class CPU {
       }
     }
     if (!turn) {
-      botImg.style.display = "block"
-      guessList.push(guess);
+      botImg.style.display = "block";
       playerGuess.textContent = "You guess :" + guess;
-      console.log("guessList " + guessList);
       if (guess == this.correctAnswer) {
         (document.querySelector(
           ".conclusion"
-        ) as HTMLHeadingElement).innerText = "You guessed" + ' ' + this.correctAnswer + ' ' + "and won!";
+        ) as HTMLHeadingElement).innerText =
+          "You guessed" + " " + this.correctAnswer + " " + "and won!";
 
-        score = guessList.length;
         gamePhase = 3;
         console.log("You win!");
-        console.log("score :" + score);
 
         updatePhase(gamePhase);
       } else if (guess < this.correctAnswer) {
@@ -81,7 +78,7 @@ class CPU {
   }
   public setAwnser() {
     let generator = new NumberGenerator();
-    let correctAnswer = generator.random(20);
+    let correctAnswer = generator.random(100);
 
     return correctAnswer;
   }
