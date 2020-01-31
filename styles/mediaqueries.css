@@ -1,5 +1,5 @@
 @media screen and (max-width: 55rem) {
-    .botbuttons {
+    .botButtons {
         display: flex;
         width: 40rem;
     }
@@ -11,7 +11,7 @@
 }
 
 @media screen and (max-width: 41.25rem) {
-    .botbuttons {
+    .botButtons {
         display: flex;
         width: 35rem;
     }
@@ -24,7 +24,7 @@
         max-width: 20rem;
     }
 
-    .botbuttons {
+    .botButtons {
         display: flex;
         width: 27rem;
     }
@@ -46,10 +46,26 @@
 }
 
 @media screen and (max-width: 27.625rem) {
-    .botbuttons {
+    .botButtons {
         display: flex;
         width: 20rem;
     }
+
+    .phase-1 div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .botPresentation img {
+          height: auto;
+          width: 10rem;
+      }
+
+      .easy img {
+          width: 10rem;
+          height: auto;
+      }
 }
 
 @media screen and (max-width: 22rem) {
@@ -58,7 +74,7 @@
         max-width: 15rem;
     }
     
-    .botbuttons {
+    .botButtons {
         display: flex;
         width: 16rem;
     }
@@ -80,5 +96,23 @@
     
     .conclusion {
         font-size: large;
+    }
+
+    .botPresentation {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .botPresentation img {
+        height: auto;
+        width: 10rem;
+        padding: 0;
+        margin-right: 5rem;
+    }
+
+    .easy img {
+        width: 10rem;
+        height: auto;
+        margin-left: 3rem;
     }
 }
