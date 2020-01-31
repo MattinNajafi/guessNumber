@@ -32,7 +32,6 @@ function init(): void {
     whatBot
   );
   clickEvents.playAgain();
-  clickEvents.testButton(guessList);
 
   // Initiate keyevents
   keyEvents.submitGuess(computer, gamePhase, yourTurn, bot, guessList, whatBot);

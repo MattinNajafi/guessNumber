@@ -92,14 +92,4 @@ class ClickEvents {
       updatePhase(gamePhase);
     });
   }
-
-  // TEST BUTTON
-  public testButton(logtext: any) {
-    let testButton: any = document.querySelector(".TEST");
-    testButton.addEventListener("click", function() {
-      // test whatever here
-
-      console.log(logtext.length);
-    });
-  }
 }
