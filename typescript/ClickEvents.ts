@@ -43,11 +43,10 @@ class ClickEvents {
       } else if (inputNameField.value == "") {
         console.log("enter name!");
       }
-
-      //else display a red border around the input field
     });
   }
 
+  //Submits guess
   public submitGuess(
     computer: any,
     gamePhase: number,
@@ -83,6 +82,7 @@ class ClickEvents {
     }
   }
 
+  //Start game button
   public startGame(gamePhase: number) {
     let startGameButton: any = document.querySelector(".startGameButton");
     gamePhase = gamePhase;

@@ -10,6 +10,7 @@ class KeyEvents {
     let playerGuessInput: any = document.querySelector(".player-input");
     let playerGuess: number;
 
+    //Makes "enter" a submit button
     if (yourTurn) {
       document.addEventListener("keypress", (e): void => {
         if (e.key === "Enter" && !(playerGuessInput.value == "")) {
