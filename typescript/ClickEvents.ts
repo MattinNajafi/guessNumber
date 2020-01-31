@@ -33,7 +33,7 @@ class ClickEvents {
     submitNameButton.addEventListener("click", functionForSubmitButton = (gamePhase: number) => {
       // if submit button is pressed and the game is in the first phase go to next phase
       if (!(inputNameField.value == "")) {
-        // savePlayerName()
+      
         
         
 

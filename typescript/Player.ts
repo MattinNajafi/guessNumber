@@ -18,7 +18,6 @@ function savePlayerScore(higherList:Array<Number>,lowerList:Array<Number>) {
     let score: number = Number(higherList.length) + Number(lowerList.length)
     let hiScoreList: any = {name: playerName, score: score }
     getNameAndScore.push(hiScoreList)
-    console.log(getNameAndScore)
     getNameAndScore.sort(function (a: any, b: any) { return (a.score - b.score) })
 
     for (let i = 0; i < getNameAndScore.length; i++) {

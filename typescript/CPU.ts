@@ -61,7 +61,7 @@ class CPU {
         gamePhase = 3;
         console.log("You win!");
         updatePhase(gamePhase);
-        savePlayerScore(this.higherList,this.lowerList)
+        savePlayerScore(this.higherList, this.lowerList)
       } else if (guess < this.correctAnswer) {
         playerMessage.textContent = "TOO LOW!";
         this.lowerList.push(guess);
@@ -73,8 +73,7 @@ class CPU {
       }
     }
 
-    console.log(this.higherList);
-    console.log(this.lowerList);
+
   }
   public setAwnser() {
     let generator = new NumberGenerator();
