@@ -14,9 +14,9 @@ function init(): void {
 
   const whatBot: number = Math.floor(Math.random() * 3);
 
-  const clickEvents = new ClickEvents();
   const keyEvents = new KeyEvents();
-  const computer = new CPU(guessSpan);
+  let computer = new CPU(guessSpan);
+  const clickEvents = new ClickEvents();
   const bot = new Bot(computer, yourTurn);
 
   // Initiate clickevents
@@ -86,6 +86,7 @@ function updatePhase(gamePhase: number): void {
     phase_1.style.display = "none";
     phase_2.style.display = "none";
     phase_3.style.display = "flex";
+    // savePlayerScore(computer)
 
     // show highscore
     // play again
