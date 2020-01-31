@@ -1,3 +1,4 @@
+// Function for saving name and highscore
 function savePlayerScore(higherList: Array<Number>, lowerList: Array<Number>) {
     let getNameAndScore;
     let savePlayerName: any = document.querySelector(".inputNameField")

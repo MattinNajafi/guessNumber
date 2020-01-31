@@ -15,6 +15,7 @@ class CPU {
     this.info = "";
   }
 
+  //Checks guesses from both bot and player and returns the result
   public checkNumber(guess: number, gamePhase: number, turn: boolean): void {
     let botMessage: any = document.querySelector(".bot-message");
     let playerMessage: any = document.querySelector(".player-message");
@@ -72,9 +73,9 @@ class CPU {
         this.info = "high";
       }
     }
-
-
   }
+
+  //Sets the correct answer
   public setAwnser() {
     let generator = new NumberGenerator();
     let correctAnswer = generator.random(100);

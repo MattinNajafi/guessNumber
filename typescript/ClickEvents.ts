@@ -43,11 +43,10 @@ class ClickEvents {
       } else if (inputNameField.value == "") {
         console.log("enter name!");
       }
-
-      //else display a red border around the input field
     });
   }
 
+  //Submits guess
   public submitGuess(
     computer: any,
     gamePhase: number,
@@ -83,6 +82,7 @@ class ClickEvents {
     }
   }
 
+  //Start game button
   public startGame(gamePhase: number) {
     let startGameButton: any = document.querySelector(".startGameButton");
     gamePhase = gamePhase;
@@ -90,16 +90,6 @@ class ClickEvents {
     startGameButton.addEventListener("click", function(gamePhase: number) {
       gamePhase = 2;
       updatePhase(gamePhase);
-    });
-  }
-
-  // TEST BUTTON
-  public testButton(logtext: any) {
-    let testButton: any = document.querySelector(".TEST");
-    testButton.addEventListener("click", function() {
-      // test whatever here
-
-      console.log(logtext.length);
     });
   }
 }
