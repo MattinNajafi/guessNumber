@@ -7,7 +7,7 @@ function savePlayerScore(higherList: Array<Number>, lowerList: Array<Number>) {
     } else {
         getNameAndScore = JSON.parse(localStorage.getItem("hiscore") as string)
     }
-    let score: number = Number(higherList.length) + Number(lowerList.length)
+    let score: number = (Number(higherList.length) + Number(lowerList.length))/2 + 1 
     let hiScoreList: any = { name: playerName, score: score }
     getNameAndScore.push(hiScoreList)
     getNameAndScore.sort(function (a: any, b: any) { return (a.score - b.score) })
