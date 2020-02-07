@@ -39,7 +39,7 @@ header {
 }
 
 .phase-0 {
-  display: block;
+  display: none;
 }
 
 .phase-0 div {
