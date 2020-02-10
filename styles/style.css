@@ -39,7 +39,7 @@ header {
 }
 
 .phase-0 {
-  display: none;
+  display: block;
 }
 
 .phase-0 div {
@@ -66,8 +66,6 @@ header {
 
 .phase-1 {
   display: none;
-  display: flex;
-  justify-content: center;
 }
 
 .phase-1 div {
